@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Photon.Pun;
 
 public class PlayerMove : MonoBehaviour
 {
@@ -58,26 +59,32 @@ public class PlayerMove : MonoBehaviour
 
     private float rotationX=0;
 
-    void Start()
+    PhotonView view;
+    private void Start()
     {
         playerCamera=GetComponentInChildren<Camera>();
         characterController=GetComponent<CharacterController>();
         defaultYPos=playerCamera.transform.localPosition.y;
         Cursor.lockState=CursorLockMode.Locked;
         Cursor.visible=false;
+        view = GetComponent<PhotonView>();
     }
+    
 
     void Update()
     {
-        if(CanMove)
+        if (view.IsMine)
         {
-            HandleMovementInput();
-            HandleMouseLook();
-            if (canCrouch)
-                HandleCrouch();
-            if (canUseHeadBob)
-                HandleHeadbob();
-            ApplyFinalMovements();
+            if (CanMove)
+            {
+                HandleMovementInput();
+                HandleMouseLook();
+                if (canCrouch)
+                    HandleCrouch();
+                if (canUseHeadBob)
+                    HandleHeadbob();
+                ApplyFinalMovements();
+            }
         }
     }
     
