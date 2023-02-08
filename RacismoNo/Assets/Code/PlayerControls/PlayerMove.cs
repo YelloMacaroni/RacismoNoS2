@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using Photon.Pun;
 
-public class PlayerMove : MonoBehaviour
+public class PlayerMove : MonoBehaviourPunCallbacks
 {
     public bool CanMove { get; private set;}=true;  
     private bool isSprinting => canSprint && Input.GetKey(sprintKey);
@@ -58,8 +58,7 @@ public class PlayerMove : MonoBehaviour
     private Vector2 currentInput;
 
     private float rotationX=0;
-
-    PhotonView view;
+    
     private void Start()
     {
         playerCamera=GetComponentInChildren<Camera>();
@@ -67,13 +66,12 @@ public class PlayerMove : MonoBehaviour
         defaultYPos=playerCamera.transform.localPosition.y;
         Cursor.lockState=CursorLockMode.Locked;
         Cursor.visible=false;
-        view = GetComponent<PhotonView>();
     }
     
 
     void Update()
     {
-        if (view.IsMine)
+        if (photonView.IsMine)
         {
             if (CanMove)
             {

@@ -19,7 +19,6 @@ ScriptsOnlyBuild:
     - Photon.Pun.PhotonAnimatorView
     - Photon.Pun.PhotonRigidbodyView
     - Photon.Pun.PhotonTransformView
-    - Photon.Pun.PhotonTransformViewClassic
     - Photon.Pun.PhotonView
     - Photon.Pun.ServerSettings
     Unity.Rider.Editor.dll:
@@ -45,9 +44,6 @@ ScriptsOnlyBuild:
     PhotonUnityNetworking:
     - Photon.Pun.PhotonAnimatorView/SynchronizedLayer
     - Photon.Pun.PhotonAnimatorView/SynchronizedParameter
-    - Photon.Pun.PhotonTransformViewPositionModel
-    - Photon.Pun.PhotonTransformViewRotationModel
-    - Photon.Pun.PhotonTransformViewScaleModel
     UnityEngine.CoreModule:
     - UnityEngine.Events.ArgumentCache
     - UnityEngine.Events.PersistentCallGroup
@@ -120,8 +116,6 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 1800}
     - Class: 114
-      Script: {instanceID: 1906}
-    - Class: 114
       Script: {instanceID: 2712}
     - Class: 114
       Script: {instanceID: 2948}
@@ -134,33 +128,33 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 4256}
     - Class: 114
-      Script: {instanceID: 5414}
+      Script: {instanceID: 5418}
     - Class: 114
-      Script: {instanceID: 5438}
+      Script: {instanceID: 5442}
     - Class: 114
-      Script: {instanceID: 5896}
+      Script: {instanceID: 5550}
     - Class: 114
-      Script: {instanceID: 5944}
+      Script: {instanceID: 5902}
     - Class: 114
-      Script: {instanceID: 6154}
+      Script: {instanceID: 5950}
     - Class: 114
-      Script: {instanceID: 6664}
+      Script: {instanceID: 6160}
     - Class: 114
-      Script: {instanceID: 6678}
+      Script: {instanceID: 6670}
     - Class: 114
-      Script: {instanceID: 7322}
+      Script: {instanceID: 6684}
     - Class: 114
-      Script: {instanceID: 7866}
+      Script: {instanceID: 7328}
     - Class: 114
-      Script: {instanceID: 8250}
+      Script: {instanceID: 7872}
     - Class: 114
-      Script: {instanceID: 8334}
+      Script: {instanceID: 8256}
     - Class: 114
-      Script: {instanceID: 8384}
+      Script: {instanceID: 8340}
     - Class: 114
-      Script: {instanceID: 8720}
+      Script: {instanceID: 8390}
     - Class: 114
-      Script: {instanceID: 24114}
+      Script: {instanceID: 8726}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -225,11 +219,11 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 3276}
     - Class: 114
-      Script: {instanceID: 6154}
+      Script: {instanceID: 5366}
     - Class: 114
-      Script: {instanceID: 6664}
+      Script: {instanceID: 6160}
     - Class: 114
-      Script: {instanceID: 24888}
+      Script: {instanceID: 6670}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -278,13 +272,13 @@ ScriptsOnlyBuild:
     - Class: 108
       Script: {instanceID: 0}
     - Class: 114
-      Script: {instanceID: 1906}
-    - Class: 114
       Script: {instanceID: 3180}
     - Class: 114
-      Script: {instanceID: 8334}
+      Script: {instanceID: 4948}
     - Class: 114
-      Script: {instanceID: 31966}
+      Script: {instanceID: 8256}
+    - Class: 114
+      Script: {instanceID: 8340}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 136
@@ -1084,6 +1078,12 @@ ScriptsOnlyBuild:
     className: UnityOnPointerClickMessageListener
   - hash:
       serializedVersion: 2
+      Hash: d1f07c9e64b7817e6271f80bb03de25f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: SpawnPlayers
+  - hash:
+      serializedVersion: 2
       Hash: 11bdd61587db747672b66c52442395d8
     assemblyName: PhotonUnityNetworking.Demos.dll
     namespaceName: Photon.Pun.Demo.Cockpit
@@ -1198,6 +1198,12 @@ ScriptsOnlyBuild:
     className: Line
   - hash:
       serializedVersion: 2
+      Hash: c8d979e2ba2dd595a522d94900eac62d
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: CreateAndJoinRooms
+  - hash:
+      serializedVersion: 2
       Hash: e80cf4684910fdd7f091d85a19a93603
     assemblyName: PhotonUnityNetworking.Demos.dll
     namespaceName: Photon.Pun.Demo.SlotRacer
@@ -1250,6 +1256,12 @@ ScriptsOnlyBuild:
     assemblyName: Unity.TextMeshPro.dll
     namespaceName: TMPro
     className: TMP_FontAsset
+  - hash:
+      serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: ConnectToServer
   - hash:
       serializedVersion: 2
       Hash: 2163458cae41cb1735c8b06fc34a9582
@@ -1958,24 +1970,6 @@ ScriptsOnlyBuild:
     assemblyName: Unity.VisualScripting.Core.dll
     namespaceName: Unity.VisualScripting
     className: UnityOnSliderValueChangedMessageListener
-  - hash:
-      serializedVersion: 2
-      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: 
-    className: ConnectToServer
-  - hash:
-      serializedVersion: 2
-      Hash: c8d979e2ba2dd595a522d94900eac62d
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: 
-    className: CreateAndJoinRooms
-  - hash:
-      serializedVersion: 2
-      Hash: d1f07c9e64b7817e6271f80bb03de25f
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: 
-    className: SpawnPlayers
   platform: 19
   scenePathNames:
   - Assets/Scenes/Loading.unity
