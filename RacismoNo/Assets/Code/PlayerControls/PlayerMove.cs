@@ -1,9 +1,9 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using Photon.Pun;
 
-public class PlayerMove : MonoBehaviourPunCallbacks
+
+public class PlayerMove : MonoBehaviour
 {
     public bool CanMove { get; private set;}=true;  
     private bool isSprinting => canSprint && Input.GetKey(sprintKey);
@@ -71,19 +71,18 @@ public class PlayerMove : MonoBehaviourPunCallbacks
 
     void Update()
     {
-        if (photonView.IsMine)
+        
+        if (CanMove)
         {
-            if (CanMove)
-            {
-                HandleMovementInput();
-                HandleMouseLook();
-                if (canCrouch)
-                    HandleCrouch();
-                if (canUseHeadBob)
-                    HandleHeadbob();
-                ApplyFinalMovements();
-            }
+            HandleMovementInput();
+            HandleMouseLook();
+            if (canCrouch)
+                HandleCrouch();
+            if (canUseHeadBob)
+                HandleHeadbob();
+            ApplyFinalMovements();
         }
+        
     }
     
     private void HandleMovementInput()

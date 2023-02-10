@@ -3,7 +3,7 @@ ScriptsOnlyBuild:
     Assembly-CSharp.dll:
     - ConnectToServer
     - CreateAndJoinRooms
-    - PlayerMove
+    - MultiMove
     - SpawnPlayers
     PhotonUnityNetworking.Demos.dll:
     - Photon.Pun.Demo.Asteroids.Asteroid
@@ -15,8 +15,6 @@ ScriptsOnlyBuild:
     - Photon.Pun.Demo.PunBasics.PlayerUI
     - Photon.Pun.Demo.SlotRacer.PlayerControl
     - Photon.Pun.Demo.SlotRacer.Utils.SplineWalker
-    PhotonUnityNetworking.Editor.dll:
-    - Photon.Pun.PunSceneSettings
     PhotonUnityNetworking.dll:
     - Photon.Pun.PhotonAnimatorView
     - Photon.Pun.PhotonRigidbodyView
@@ -152,11 +150,11 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 8256}
     - Class: 114
-      Script: {instanceID: 8340}
-    - Class: 114
       Script: {instanceID: 8390}
     - Class: 114
       Script: {instanceID: 8726}
+    - Class: 114
+      Script: {instanceID: 24102}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -280,7 +278,7 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 8256}
     - Class: 114
-      Script: {instanceID: 8340}
+      Script: {instanceID: 24102}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 136
@@ -1972,6 +1970,12 @@ ScriptsOnlyBuild:
     assemblyName: Unity.VisualScripting.Core.dll
     namespaceName: Unity.VisualScripting
     className: UnityOnSliderValueChangedMessageListener
+  - hash:
+      serializedVersion: 2
+      Hash: 53bcee5a8a09f17709452f09e7bd6460
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: MultiMove
   platform: 19
   scenePathNames:
   - Assets/Scenes/Loading.unity

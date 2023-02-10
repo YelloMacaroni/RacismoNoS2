@@ -321,6 +321,7 @@
 -r:"Library/Bee/artifacts/1900b0aPDevDbg.dag/Unity.VisualScripting.Flow.ref.dll"
 -r:"Library/Bee/artifacts/1900b0aPDevDbg.dag/Unity.VisualScripting.State.ref.dll"
 -r:"Library/Bee/artifacts/1900b0aPDevDbg.dag/UnityEngine.UI.ref.dll"
+"Assets/Code/PlayerControls/MultiMove.cs"
 "Assets/Code/PlayerControls/PlayerMove.cs"
 "Assets/ConnectToServer.cs"
 "Assets/CreateAndJoinRooms.cs"
