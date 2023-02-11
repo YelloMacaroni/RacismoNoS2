@@ -51,23 +51,27 @@ public class MultiMove : MonoBehaviourPunCallbacks
     private bool isCrouching;
     private bool duringCrouchAnimation;
 
-    private Camera playerCamera;
+    [SerializeField] private Camera playerCamera;
     private CharacterController characterController;
 
     private Vector3 moveDirection;
     private Vector2 currentInput;
 
     private float rotationX=0;
-    
+
     private void Start()
     {
-        playerCamera=GetComponentInChildren<Camera>();
-        characterController=GetComponent<CharacterController>();
-        defaultYPos=playerCamera.transform.localPosition.y;
-        Cursor.lockState=CursorLockMode.Locked;
-        Cursor.visible=false;
+        playerCamera = GetComponentInChildren<Camera>();
+        characterController = GetComponent<CharacterController>();
+        defaultYPos = playerCamera.transform.localPosition.y;
+        Cursor.lockState = CursorLockMode.Locked;
+        Cursor.visible = false;
+        if (!photonView.IsMine)
+        {
+            Destroy(playerCamera);
+        }
     }
-    
+
 
     void Update()
     {
