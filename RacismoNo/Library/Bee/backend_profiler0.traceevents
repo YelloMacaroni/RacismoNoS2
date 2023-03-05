@@ -1,6 +1,7 @@
 { "cat":"", "pid":12345, "tid":0, "ts":0, "ph":"M", "name":"process_name", "args": { "name":"bee_backend" } }
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 ,{ "pid":12345, "tid":0, "ts":1678036142645085, "dur":1785, "ph":"X", "name": "DriverInitData",  "args": { "detail":"" }}
 ,{ "pid":12345, "tid":0, "ts":1678036142646882, "dur":483, "ph":"X", "name": "Tundra",  "args": { "detail":"RemoveStaleOutputs" }}
 ,{ "pid":12345, "tid":0, "ts":1678036142647443, "dur":49, "ph":"X", "name": "Tundra",  "args": { "detail":"PrepareNodes" }}
@@ -1312,6 +1313,8 @@
 ,{ "pid":12345, "tid":0, "ts":1675868272265597, "dur":512, "ph":"X", "name": "ProfilerWriteOutput" }
 >>>>>>> 57c43912f273259ce83022b956faa059e9ec5e0d
 =======
+=======
+>>>>>>> parent of 05762762 (MultiplayerCompleted)
 ,{ "pid":12345, "tid":0, "ts":1676065344452387, "dur":2109, "ph":"X", "name": "DriverInitData",  "args": { "detail":"" }}
 ,{ "pid":12345, "tid":0, "ts":1676065344454506, "dur":471, "ph":"X", "name": "Tundra",  "args": { "detail":"RemoveStaleOutputs" }}
 ,{ "pid":12345, "tid":0, "ts":1676065344455020, "dur":20, "ph":"X", "name": "Tundra",  "args": { "detail":"PrepareNodes" }}
@@ -1749,5 +1752,8 @@
 ,{ "pid":12345, "tid":6, "ts":1676065344497759, "dur":1889, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/TravailEpita/Test/RacismoNo_Data/level0.resS" }}
 ,{ "pid":12345, "tid":6, "ts":1676065344499702, "dur":934, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
 ,{ "pid":12345, "tid":0, "ts":1676065344510960, "dur":1497, "ph":"X", "name": "ProfilerWriteOutput" }
+<<<<<<< HEAD
+>>>>>>> parent of 05762762 (MultiplayerCompleted)
+=======
 >>>>>>> parent of 05762762 (MultiplayerCompleted)
 ,
