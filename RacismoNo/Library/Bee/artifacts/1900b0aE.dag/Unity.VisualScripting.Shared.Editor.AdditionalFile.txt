@@ -1,5 +1,1 @@
-<<<<<<< HEAD
-C:\TravailEpita\RacismoNoS2\RacismoNo
-=======
-D:\PROJETS2\unity-RacismoNo\RacismoNoS2\RacismoNo
->>>>>>> 57c43912f273259ce83022b956faa059e9ec5e0d
+C:\TravailEpita\TESTREPARAGE\RacismoNoS2\RacismoNo

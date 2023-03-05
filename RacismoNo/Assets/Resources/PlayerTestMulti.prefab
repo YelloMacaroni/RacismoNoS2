@@ -353,3 +353,4 @@ MonoBehaviour:
   sprintBobAmount: 0.11
   crouchBobSpeed: 8
   crouchBobAmount: 0.025
+  playerCamera: {fileID: 0}

@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+
 public class PlayerMove : MonoBehaviour
 {
     public bool CanMove { get; private set;}=true;  
@@ -57,8 +58,8 @@ public class PlayerMove : MonoBehaviour
     private Vector2 currentInput;
 
     private float rotationX=0;
-
-    void Start()
+    
+    private void Start()
     {
         playerCamera=GetComponentInChildren<Camera>();
         characterController=GetComponent<CharacterController>();
@@ -66,10 +67,12 @@ public class PlayerMove : MonoBehaviour
         Cursor.lockState=CursorLockMode.Locked;
         Cursor.visible=false;
     }
+    
 
     void Update()
     {
-        if(CanMove)
+        
+        if (CanMove)
         {
             HandleMovementInput();
             HandleMouseLook();
@@ -79,6 +82,7 @@ public class PlayerMove : MonoBehaviour
                 HandleHeadbob();
             ApplyFinalMovements();
         }
+        
     }
     
     private void HandleMovementInput()
@@ -164,17 +168,6 @@ public class PlayerMove : MonoBehaviour
     {
 
     }
-<<<<<<< HEAD
-
-    //Erreur de compile, Item n'existe pas, je laisse comme ca pour l'instant.
-    
-    //public void click(Item item)
-    //{
-        
-    //}
-    
-=======
->>>>>>> 57c43912f273259ce83022b956faa059e9ec5e0d
     public void click()
     {
 
