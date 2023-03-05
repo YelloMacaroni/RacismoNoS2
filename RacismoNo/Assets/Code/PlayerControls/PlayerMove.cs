@@ -169,7 +169,14 @@ public class PlayerMove : MonoBehaviour
 
     }
 
-    public void click(Item item)
+    //Erreur de compile, Item n'existe pas, je laisse comme ca pour l'instant.
+    
+    //public void click(Item item)
+    //{
+        
+    //}
+    
+    public void click()
     {
         
     }
