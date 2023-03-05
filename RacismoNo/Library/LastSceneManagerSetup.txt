@@ -1,5 +1,9 @@
 sceneSetups:
+<<<<<<< HEAD
 - path: Assets/Scenes/TestMultiplayer.unity
+=======
+- path: Assets/Scenes/SceneTest.unity
+>>>>>>> 57c43912f273259ce83022b956faa059e9ec5e0d
   isLoaded: 1
   isActive: 1
   isSubScene: 0
