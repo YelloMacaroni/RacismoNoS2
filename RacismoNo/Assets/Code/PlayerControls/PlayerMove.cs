@@ -168,9 +168,10 @@ public class PlayerMove : MonoBehaviour
     {
 
     }
-    public void click()
-    {
 
+    public void click(Item item)
+    {
+        
     }
 
 }
