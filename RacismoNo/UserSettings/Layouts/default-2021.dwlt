@@ -16,6 +16,7 @@ MonoBehaviour:
     serializedVersion: 2
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     x: 0
 <<<<<<< HEAD
     y: 43
@@ -27,6 +28,8 @@ MonoBehaviour:
     height: 780.8
 >>>>>>> 57c43912f273259ce83022b956faa059e9ec5e0d
 =======
+=======
+>>>>>>> parent of 05762762 (MultiplayerCompleted)
 =======
 >>>>>>> parent of 05762762 (MultiplayerCompleted)
     x: 96
@@ -71,7 +74,11 @@ MonoBehaviour:
   vertical: 0
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
   controlID: 21
+=======
+  controlID: 70
+>>>>>>> parent of 05762762 (MultiplayerCompleted)
 =======
   controlID: 70
 >>>>>>> parent of 05762762 (MultiplayerCompleted)
@@ -290,6 +297,7 @@ MonoBehaviour:
   vertical: 1
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
   controlID: 79
 =======
     width: 1173.6
@@ -299,6 +307,9 @@ MonoBehaviour:
   vertical: 1
   controlID: 22
 >>>>>>> 57c43912f273259ce83022b956faa059e9ec5e0d
+=======
+  controlID: 71
+>>>>>>> parent of 05762762 (MultiplayerCompleted)
 =======
   controlID: 71
 >>>>>>> parent of 05762762 (MultiplayerCompleted)
@@ -332,6 +343,7 @@ MonoBehaviour:
   vertical: 0
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
   controlID: 80
 =======
     width: 1173.6
@@ -341,6 +353,9 @@ MonoBehaviour:
   vertical: 0
   controlID: 23
 >>>>>>> 57c43912f273259ce83022b956faa059e9ec5e0d
+=======
+  controlID: 72
+>>>>>>> parent of 05762762 (MultiplayerCompleted)
 =======
   controlID: 72
 >>>>>>> parent of 05762762 (MultiplayerCompleted)
@@ -430,6 +445,7 @@ MonoBehaviour:
     serializedVersion: 2
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     x: 0
 <<<<<<< HEAD
     y: 692
@@ -441,6 +457,8 @@ MonoBehaviour:
     height: 222.59998
 >>>>>>> 57c43912f273259ce83022b956faa059e9ec5e0d
 =======
+=======
+>>>>>>> parent of 05762762 (MultiplayerCompleted)
 =======
 >>>>>>> parent of 05762762 (MultiplayerCompleted)
     x: 96
@@ -505,6 +523,9 @@ MonoBehaviour:
     m_LastClickedID: 23926
     m_ExpandedIDs: 000000002e5d0000305d0000325d0000345d0000365d0000385d000000ca9a3bffffff7f
 <<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> parent of 05762762 (MultiplayerCompleted)
+=======
 >>>>>>> parent of 05762762 (MultiplayerCompleted)
 =======
 >>>>>>> parent of 05762762 (MultiplayerCompleted)
@@ -538,10 +559,14 @@ MonoBehaviour:
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     m_ExpandedIDs: 00000000745d0000765d0000785d00007a5d00007c5d00007e5d0000805d0000825d0000
 =======
     m_ExpandedIDs: 00000000725e0000745e0000765e0000785e00007a5e00007c5e0000
 >>>>>>> 57c43912f273259ce83022b956faa059e9ec5e0d
+=======
+    m_ExpandedIDs: 000000002e5d0000305d0000325d0000345d0000365d0000385d0000
+>>>>>>> parent of 05762762 (MultiplayerCompleted)
 =======
     m_ExpandedIDs: 000000002e5d0000305d0000325d0000345d0000365d0000385d0000
 >>>>>>> parent of 05762762 (MultiplayerCompleted)
@@ -626,6 +651,7 @@ MonoBehaviour:
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     x: 1458
     y: 73
     width: 461
@@ -637,6 +663,8 @@ MonoBehaviour:
     height: 709.8
 >>>>>>> 57c43912f273259ce83022b956faa059e9ec5e0d
 =======
+=======
+>>>>>>> parent of 05762762 (MultiplayerCompleted)
 =======
 >>>>>>> parent of 05762762 (MultiplayerCompleted)
     x: 1400
@@ -683,6 +711,7 @@ MonoBehaviour:
     serializedVersion: 2
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     x: 0
 <<<<<<< HEAD
     y: 73
@@ -694,6 +723,8 @@ MonoBehaviour:
     height: 466.2
 >>>>>>> 57c43912f273259ce83022b956faa059e9ec5e0d
 =======
+=======
+>>>>>>> parent of 05762762 (MultiplayerCompleted)
 =======
 >>>>>>> parent of 05762762 (MultiplayerCompleted)
     x: 96
@@ -713,10 +744,14 @@ MonoBehaviour:
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
       m_ExpandedIDs: 32fbffff
 =======
       m_ExpandedIDs: f2f7ffff6cf9ffff88faffffe05e0000
 >>>>>>> 57c43912f273259ce83022b956faa059e9ec5e0d
+=======
+      m_ExpandedIDs: f2eeffff42efffff60efffff64efffff68efffff3ef3fffff8f9ffff32fbffff
+>>>>>>> parent of 05762762 (MultiplayerCompleted)
 =======
       m_ExpandedIDs: f2eeffff42efffff60efffff64efffff68efffff3ef3fffff8f9ffff32fbffff
 >>>>>>> parent of 05762762 (MultiplayerCompleted)
@@ -769,6 +804,7 @@ MonoBehaviour:
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     x: 361
     y: 73
     width: 1095
@@ -780,6 +816,8 @@ MonoBehaviour:
     height: 466.2
 >>>>>>> 57c43912f273259ce83022b956faa059e9ec5e0d
 =======
+=======
+>>>>>>> parent of 05762762 (MultiplayerCompleted)
 =======
 >>>>>>> parent of 05762762 (MultiplayerCompleted)
     x: 419
@@ -1174,6 +1212,7 @@ MonoBehaviour:
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     x: 361
     y: 73
     width: 1095
@@ -1185,6 +1224,8 @@ MonoBehaviour:
     height: 466.2
 >>>>>>> 57c43912f273259ce83022b956faa059e9ec5e0d
 =======
+=======
+>>>>>>> parent of 05762762 (MultiplayerCompleted)
 =======
 >>>>>>> parent of 05762762 (MultiplayerCompleted)
     x: 419
