@@ -387,6 +387,7 @@
 "Assets/Photon/PhotonRealtime/Demos/DemoLoadBalancing/ConnectAndJoinRandomLb.cs"
 "Assets/PlayerListItem.cs"
 "Assets/RoomListItem.cs"
+"Assets/Scripts/AccueilJeu.cs"
 "Assets/Scripts/Launcher.cs"
 "Assets/ShowPlayerNickName.cs"
 "Assets/SpawnPlayers.cs"

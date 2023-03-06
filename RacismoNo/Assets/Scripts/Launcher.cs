@@ -5,7 +5,7 @@ using Photon.Pun;
 using TMPro;
 using Photon.Realtime;
 using System.Linq;
-
+using UnityEngine.SceneManagement;
 public class Launcher : MonoBehaviourPunCallbacks
 {
 
@@ -61,10 +61,15 @@ public class Launcher : MonoBehaviourPunCallbacks
         PhotonNetwork.CreateRoom(roomNameInputField.text);
         MenuManager.Instance.OpenMenu("loading");
     }
-
+    
+    public void RetourAccueil()
+    {
+        PhotonNetwork.Disconnect();
+        SceneManager.LoadScene("Lancement");
+    }
     public void StartGame()
     {
-        PhotonNetwork.LoadLevel(1);
+        PhotonNetwork.LoadLevel("MultiplayerGame");
     }
     public override void OnJoinedRoom()
     {
