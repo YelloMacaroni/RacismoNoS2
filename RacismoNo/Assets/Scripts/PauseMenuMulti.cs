@@ -6,7 +6,7 @@ using TMPro;
 using Photon.Realtime;
 using System.Linq;
 using UnityEngine.SceneManagement;
-public class PauseMenuMulti : MonoBehaviour
+public class PauseMenuMulti : MonoBehaviourPunCallbacks
 {
     public GameObject pauseMenu;
     public static bool isPaused;
@@ -33,10 +33,14 @@ public class PauseMenuMulti : MonoBehaviour
     {
         pauseMenu.SetActive(true);
         isPaused = true;
+        Cursor.lockState = CursorLockMode.None;
+        Cursor.visible = true;
     }
     
     public void ResumeGame()
     {
+        Cursor.lockState = CursorLockMode.Locked;
+        Cursor.visible = false;
         pauseMenu.SetActive(false);
         isPaused = false;
     }
@@ -44,7 +48,13 @@ public class PauseMenuMulti : MonoBehaviour
     public void RetourAccueil()
     {
         isPaused = false;
+        Cursor.lockState = CursorLockMode.None;
+        Cursor.visible = true;
         PhotonNetwork.Disconnect();
+    }
+
+    public override void OnDisconnected(DisconnectCause cause)
+    {
         SceneManager.LoadScene("Lancement");
     }
     

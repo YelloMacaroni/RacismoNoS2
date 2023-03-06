@@ -7,6 +7,7 @@ ScriptsOnlyBuild:
     - MenuManager
     - MultiMove
     - PauseMenuMulti
+    - PauseMenuSolo
     - PlayerListItem
     - PlayerMove
     - RoomListItem
@@ -146,6 +147,24 @@ ScriptsOnlyBuild:
   - assembly: Assembly-CSharp
     fullTypeName: Launcher
     methodName: ChangeName
+  - assembly: Assembly-CSharp
+    fullTypeName: PauseMenuMulti
+    methodName: RetourAccueil
+  - assembly: Assembly-CSharp
+    fullTypeName: PauseMenuMulti
+    methodName: ResumeGame
+  - assembly: Assembly-CSharp
+    fullTypeName: PauseMenuMulti
+    methodName: Quitter
+  - assembly: Assembly-CSharp
+    fullTypeName: PauseMenuSolo
+    methodName: Quitter
+  - assembly: Assembly-CSharp
+    fullTypeName: PauseMenuSolo
+    methodName: RetourAccueil
+  - assembly: Assembly-CSharp
+    fullTypeName: PauseMenuSolo
+    methodName: ResumeGame
   sceneClasses:
     Assets/Scenes/Lancement.unity:
     - Class: 1
@@ -217,43 +236,43 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 4114}
     - Class: 114
-      Script: {instanceID: 4292}
+      Script: {instanceID: 4296}
     - Class: 114
-      Script: {instanceID: 4442}
+      Script: {instanceID: 4446}
     - Class: 114
-      Script: {instanceID: 4728}
+      Script: {instanceID: 4732}
     - Class: 114
-      Script: {instanceID: 5454}
+      Script: {instanceID: 5458}
     - Class: 114
-      Script: {instanceID: 5478}
+      Script: {instanceID: 5482}
     - Class: 114
-      Script: {instanceID: 5544}
+      Script: {instanceID: 5548}
     - Class: 114
-      Script: {instanceID: 5938}
+      Script: {instanceID: 5942}
     - Class: 114
-      Script: {instanceID: 5988}
+      Script: {instanceID: 5992}
     - Class: 114
-      Script: {instanceID: 6198}
+      Script: {instanceID: 6202}
     - Class: 114
-      Script: {instanceID: 6354}
+      Script: {instanceID: 6358}
     - Class: 114
-      Script: {instanceID: 6708}
+      Script: {instanceID: 6712}
     - Class: 114
-      Script: {instanceID: 6722}
+      Script: {instanceID: 6726}
     - Class: 114
-      Script: {instanceID: 7178}
+      Script: {instanceID: 7182}
     - Class: 114
-      Script: {instanceID: 7366}
+      Script: {instanceID: 7370}
     - Class: 114
-      Script: {instanceID: 7912}
+      Script: {instanceID: 7916}
     - Class: 114
-      Script: {instanceID: 8296}
+      Script: {instanceID: 8300}
     - Class: 114
-      Script: {instanceID: 8368}
+      Script: {instanceID: 8372}
     - Class: 114
-      Script: {instanceID: 8432}
+      Script: {instanceID: 8436}
     - Class: 114
-      Script: {instanceID: 8768}
+      Script: {instanceID: 8772}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -330,21 +349,21 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 3792}
     - Class: 114
-      Script: {instanceID: 4984}
+      Script: {instanceID: 4278}
     - Class: 114
-      Script: {instanceID: 5544}
+      Script: {instanceID: 4988}
     - Class: 114
-      Script: {instanceID: 6198}
+      Script: {instanceID: 5548}
     - Class: 114
-      Script: {instanceID: 6354}
+      Script: {instanceID: 6202}
     - Class: 114
-      Script: {instanceID: 6708}
+      Script: {instanceID: 6358}
     - Class: 114
-      Script: {instanceID: 8296}
+      Script: {instanceID: 6712}
     - Class: 114
-      Script: {instanceID: 8368}
+      Script: {instanceID: 8300}
     - Class: 114
-      Script: {instanceID: 25014}
+      Script: {instanceID: 8372}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -403,23 +422,23 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 4092}
     - Class: 114
-      Script: {instanceID: 4426}
+      Script: {instanceID: 4430}
     - Class: 114
-      Script: {instanceID: 5316}
+      Script: {instanceID: 5320}
     - Class: 114
-      Script: {instanceID: 5544}
+      Script: {instanceID: 5548}
     - Class: 114
-      Script: {instanceID: 5972}
+      Script: {instanceID: 5976}
     - Class: 114
-      Script: {instanceID: 6198}
+      Script: {instanceID: 6202}
     - Class: 114
-      Script: {instanceID: 6354}
+      Script: {instanceID: 6358}
     - Class: 114
-      Script: {instanceID: 6708}
+      Script: {instanceID: 6712}
     - Class: 114
-      Script: {instanceID: 7178}
+      Script: {instanceID: 7182}
     - Class: 114
-      Script: {instanceID: 7644}
+      Script: {instanceID: 7648}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -468,14 +487,42 @@ ScriptsOnlyBuild:
     - Class: 108
       Script: {instanceID: 0}
     - Class: 114
-      Script: {instanceID: 8382}
+      Script: {instanceID: 1560}
+    - Class: 114
+      Script: {instanceID: 2744}
+    - Class: 114
+      Script: {instanceID: 2980}
+    - Class: 114
+      Script: {instanceID: 3310}
+    - Class: 114
+      Script: {instanceID: 4120}
+    - Class: 114
+      Script: {instanceID: 5548}
+    - Class: 114
+      Script: {instanceID: 6202}
+    - Class: 114
+      Script: {instanceID: 6358}
+    - Class: 114
+      Script: {instanceID: 6712}
+    - Class: 114
+      Script: {instanceID: 8386}
     - Class: 115
+      Script: {instanceID: 0}
+    - Class: 128
       Script: {instanceID: 0}
     - Class: 143
       Script: {instanceID: 0}
     - Class: 157
       Script: {instanceID: 0}
     - Class: 196
+      Script: {instanceID: 0}
+    - Class: 213
+      Script: {instanceID: 0}
+    - Class: 222
+      Script: {instanceID: 0}
+    - Class: 223
+      Script: {instanceID: 0}
+    - Class: 224
       Script: {instanceID: 0}
   scriptHashData:
   - hash:
@@ -1104,6 +1151,12 @@ ScriptsOnlyBuild:
     className: PlayerAnimatorManager
   - hash:
       serializedVersion: 2
+      Hash: 930b2a7c015542327cee6af349728cdd
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: PauseMenuSolo
+  - hash:
+      serializedVersion: 2
       Hash: 74c875e0f15c48e0a55f06093aa93e15
     assemblyName: PhotonUnityNetworking.Demos.dll
     namespaceName: Photon.Pun.Demo.Cockpit
@@ -1126,6 +1179,12 @@ ScriptsOnlyBuild:
     assemblyName: PhotonUnityNetworking.Utilities.dll
     namespaceName: Photon.Pun.UtilityScripts
     className: PunTeams
+  - hash:
+      serializedVersion: 2
+      Hash: 930b2a7c015542327cee6af349728cdd
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: PauseMenuMulti
   - hash:
       serializedVersion: 2
       Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
@@ -2206,18 +2265,6 @@ ScriptsOnlyBuild:
     assemblyName: Unity.VisualScripting.Core.dll
     namespaceName: Unity.VisualScripting
     className: UnityOnSliderValueChangedMessageListener
-  - hash:
-      serializedVersion: 2
-      Hash: 930b2a7c015542327cee6af349728cdd
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: 
-    className: PauseMenuMulti
-  - hash:
-      serializedVersion: 2
-      Hash: 930b2a7c015542327cee6af349728cdd
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: 
-    className: PauseMenuSolo
   platform: 19
   scenePathNames:
   - Assets/Scenes/Lancement.unity

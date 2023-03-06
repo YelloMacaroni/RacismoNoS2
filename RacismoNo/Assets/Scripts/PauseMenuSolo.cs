@@ -31,6 +31,8 @@ public class PauseMenuSolo : MonoBehaviour
         pauseMenu.SetActive(true);
         isPaused = true;
         Time.timeScale = 0f;
+        Cursor.lockState = CursorLockMode.None;
+        Cursor.visible = true;
     }
     
     public void ResumeGame()
@@ -42,6 +44,8 @@ public class PauseMenuSolo : MonoBehaviour
     
     public void RetourAccueil()
     {
+        Cursor.lockState = CursorLockMode.None;
+        Cursor.visible = true;
         isPaused = false;
         SceneManager.LoadScene("Lancement");
     }
