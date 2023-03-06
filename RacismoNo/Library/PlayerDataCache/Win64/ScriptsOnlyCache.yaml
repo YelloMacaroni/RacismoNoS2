@@ -18,6 +18,8 @@ ScriptsOnlyBuild:
     - Photon.Pun.Demo.PunBasics.PlayerUI
     - Photon.Pun.Demo.SlotRacer.PlayerControl
     - Photon.Pun.Demo.SlotRacer.Utils.SplineWalker
+    PhotonUnityNetworking.Editor.dll:
+    - Photon.Pun.PunSceneSettings
     PhotonUnityNetworking.dll:
     - Photon.Pun.PhotonAnimatorView
     - Photon.Pun.PhotonRigidbodyView
@@ -156,13 +158,13 @@ ScriptsOnlyBuild:
     - Class: 108
       Script: {instanceID: 0}
     - Class: 114
-      Script: {instanceID: 2118}
+      Script: {instanceID: 2138}
     - Class: 114
-      Script: {instanceID: 3212}
+      Script: {instanceID: 3232}
     - Class: 114
-      Script: {instanceID: 4982}
+      Script: {instanceID: 5002}
     - Class: 114
-      Script: {instanceID: 8294}
+      Script: {instanceID: 8314}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 137
@@ -219,77 +221,77 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 1560}
     - Class: 114
-      Script: {instanceID: 1660}
+      Script: {instanceID: 1680}
     - Class: 114
-      Script: {instanceID: 1750}
+      Script: {instanceID: 1770}
     - Class: 114
-      Script: {instanceID: 1826}
+      Script: {instanceID: 1846}
     - Class: 114
-      Script: {instanceID: 2118}
+      Script: {instanceID: 2138}
     - Class: 114
-      Script: {instanceID: 2268}
+      Script: {instanceID: 2288}
     - Class: 114
-      Script: {instanceID: 2550}
+      Script: {instanceID: 2570}
     - Class: 114
-      Script: {instanceID: 2742}
+      Script: {instanceID: 2762}
     - Class: 114
-      Script: {instanceID: 2978}
+      Script: {instanceID: 2998}
     - Class: 114
-      Script: {instanceID: 3190}
+      Script: {instanceID: 3210}
     - Class: 114
-      Script: {instanceID: 3212}
+      Script: {instanceID: 3232}
     - Class: 114
-      Script: {instanceID: 3308}
-    - Class: 114
-      Script: {instanceID: 4090}
+      Script: {instanceID: 3328}
     - Class: 114
       Script: {instanceID: 4110}
     - Class: 114
-      Script: {instanceID: 4112}
+      Script: {instanceID: 4130}
     - Class: 114
-      Script: {instanceID: 4290}
+      Script: {instanceID: 4132}
     - Class: 114
-      Script: {instanceID: 4424}
+      Script: {instanceID: 4310}
     - Class: 114
-      Script: {instanceID: 4440}
+      Script: {instanceID: 4444}
     - Class: 114
-      Script: {instanceID: 4726}
+      Script: {instanceID: 4460}
     - Class: 114
-      Script: {instanceID: 5314}
+      Script: {instanceID: 4746}
     - Class: 114
-      Script: {instanceID: 5452}
+      Script: {instanceID: 5334}
     - Class: 114
-      Script: {instanceID: 5476}
+      Script: {instanceID: 5472}
     - Class: 114
-      Script: {instanceID: 5542}
+      Script: {instanceID: 5496}
     - Class: 114
-      Script: {instanceID: 5936}
+      Script: {instanceID: 5562}
     - Class: 114
-      Script: {instanceID: 5970}
+      Script: {instanceID: 5956}
     - Class: 114
-      Script: {instanceID: 5986}
+      Script: {instanceID: 5990}
     - Class: 114
-      Script: {instanceID: 6196}
+      Script: {instanceID: 6006}
     - Class: 114
-      Script: {instanceID: 6352}
+      Script: {instanceID: 6216}
     - Class: 114
-      Script: {instanceID: 6706}
+      Script: {instanceID: 6372}
     - Class: 114
-      Script: {instanceID: 6720}
+      Script: {instanceID: 6726}
     - Class: 114
-      Script: {instanceID: 7176}
+      Script: {instanceID: 6740}
     - Class: 114
-      Script: {instanceID: 7364}
+      Script: {instanceID: 7196}
     - Class: 114
-      Script: {instanceID: 7642}
+      Script: {instanceID: 7384}
     - Class: 114
-      Script: {instanceID: 7910}
+      Script: {instanceID: 7662}
     - Class: 114
-      Script: {instanceID: 8294}
+      Script: {instanceID: 7930}
     - Class: 114
-      Script: {instanceID: 8428}
+      Script: {instanceID: 8314}
     - Class: 114
-      Script: {instanceID: 8764}
+      Script: {instanceID: 8448}
+    - Class: 114
+      Script: {instanceID: 8784}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
