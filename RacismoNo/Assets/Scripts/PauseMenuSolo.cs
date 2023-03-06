@@ -47,6 +47,7 @@ public class PauseMenuSolo : MonoBehaviour
         Cursor.lockState = CursorLockMode.None;
         Cursor.visible = true;
         isPaused = false;
+        Time.timeScale = 1f;
         SceneManager.LoadScene("Lancement");
     }
     
