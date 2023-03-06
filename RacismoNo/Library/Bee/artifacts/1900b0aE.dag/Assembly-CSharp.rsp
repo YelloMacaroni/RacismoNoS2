@@ -389,6 +389,8 @@
 "Assets/RoomListItem.cs"
 "Assets/Scripts/AccueilJeu.cs"
 "Assets/Scripts/Launcher.cs"
+"Assets/Scripts/PauseMenuMulti.cs"
+"Assets/Scripts/PauseMenuSolo.cs"
 "Assets/ShowPlayerNickName.cs"
 "Assets/SpawnPlayers.cs"
 -langversion:9.0

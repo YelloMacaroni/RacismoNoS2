@@ -77,15 +77,18 @@ public class MultiMove : MonoBehaviourPunCallbacks
     {
         if (photonView.IsMine)
         {
-            if (CanMove)
+            if (!PauseMenuMulti.isPaused)
             {
-                HandleMovementInput();
-                HandleMouseLook();
-                if (canCrouch)
-                    HandleCrouch();
-                if (canUseHeadBob)
-                    HandleHeadbob();
-                ApplyFinalMovements();
+                if (CanMove)
+                {
+                    HandleMovementInput();
+                    HandleMouseLook();
+                    if (canCrouch)
+                        HandleCrouch();
+                    if (canUseHeadBob)
+                        HandleHeadbob();
+                    ApplyFinalMovements();
+                }
             }
         }
     }
