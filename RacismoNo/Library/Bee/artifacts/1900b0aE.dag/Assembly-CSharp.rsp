@@ -369,6 +369,8 @@
 "Assets/Code/PlayerControls/PlayerMove.cs"
 "Assets/ConnectToServer.cs"
 "Assets/CreateAndJoinRooms.cs"
+"Assets/Menu.cs"
+"Assets/MenuManager.cs"
 "Assets/Photon/PhotonChat/Demos/Common/EventSystemSpawner.cs"
 "Assets/Photon/PhotonChat/Demos/Common/OnStartDelete.cs"
 "Assets/Photon/PhotonChat/Demos/Common/TextButtonTransition.cs"
@@ -383,6 +385,9 @@
 "Assets/Photon/PhotonLibs/WebSocket/SocketWebTcp.cs"
 "Assets/Photon/PhotonLibs/WebSocket/WebSocket.cs"
 "Assets/Photon/PhotonRealtime/Demos/DemoLoadBalancing/ConnectAndJoinRandomLb.cs"
+"Assets/PlayerListItem.cs"
+"Assets/RoomListItem.cs"
+"Assets/Scripts/Launcher.cs"
 "Assets/SpawnPlayers.cs"
 -langversion:9.0
 
