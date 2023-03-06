@@ -388,6 +388,7 @@
 "Assets/PlayerListItem.cs"
 "Assets/RoomListItem.cs"
 "Assets/Scripts/Launcher.cs"
+"Assets/ShowPlayerNickName.cs"
 "Assets/SpawnPlayers.cs"
 -langversion:9.0
 

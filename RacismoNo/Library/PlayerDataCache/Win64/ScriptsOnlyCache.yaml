@@ -7,6 +7,7 @@ ScriptsOnlyBuild:
     - MultiMove
     - PlayerListItem
     - RoomListItem
+    - ShowPlayerNickName
     - SpawnPlayers
     PhotonUnityNetworking.Demos.dll:
     - Photon.Pun.Demo.Asteroids.Asteroid
@@ -32,6 +33,7 @@ ScriptsOnlyBuild:
     - TMPro.TMP_Settings
     - TMPro.TMP_SpriteAsset
     - TMPro.TMP_StyleSheet
+    - TMPro.TextMeshPro
     - TMPro.TextMeshProUGUI
     UnityEditor.TestRunner.dll:
     - UnityEditor.TestTools.TestRunner.Api.CallbacksHolder
@@ -166,10 +168,18 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 3212}
     - Class: 114
+      Script: {instanceID: 3790}
+    - Class: 114
       Script: {instanceID: 4982}
     - Class: 114
+      Script: {instanceID: 5542}
+    - Class: 114
       Script: {instanceID: 8294}
+    - Class: 114
+      Script: {instanceID: 25884}
     - Class: 115
+      Script: {instanceID: 0}
+    - Class: 128
       Script: {instanceID: 0}
     - Class: 137
       Script: {instanceID: 0}
@@ -178,6 +188,8 @@ ScriptsOnlyBuild:
     - Class: 157
       Script: {instanceID: 0}
     - Class: 196
+      Script: {instanceID: 0}
+    - Class: 224
       Script: {instanceID: 0}
     Assets/Scenes/NouveauMulti.unity:
     - Class: 1
@@ -247,6 +259,8 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 3308}
     - Class: 114
+      Script: {instanceID: 3790}
+    - Class: 114
       Script: {instanceID: 4090}
     - Class: 114
       Script: {instanceID: 4110}
@@ -296,6 +310,8 @@ ScriptsOnlyBuild:
       Script: {instanceID: 8428}
     - Class: 114
       Script: {instanceID: 8764}
+    - Class: 114
+      Script: {instanceID: 25884}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -2043,6 +2059,12 @@ ScriptsOnlyBuild:
     assemblyName: Unity.VisualScripting.Core.dll
     namespaceName: Unity.VisualScripting
     className: UnityOnSliderValueChangedMessageListener
+  - hash:
+      serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: ShowPlayerNickName
   platform: 19
   scenePathNames:
   - Assets/Scenes/NouveauMulti.unity
