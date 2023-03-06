@@ -11,6 +11,7 @@ public class Launcher : MonoBehaviourPunCallbacks
 
     public static Launcher Instance;
     [SerializeField] TMP_InputField roomNameInputField;
+    [SerializeField] TMP_InputField PlayerNameInputField;
     [SerializeField] TMP_Text errorText;
     [SerializeField] TMP_Text roomNameText;
     [SerializeField] Transform roomListContent;
@@ -40,9 +41,17 @@ public class Launcher : MonoBehaviourPunCallbacks
     {
         MenuManager.Instance.OpenMenu("title");
         Debug.Log("Joined Lobby");
-        PhotonNetwork.NickName = "Player" + Random.Range(0, 1000).ToString("0000");
     }
 
+    public void ChangeName()
+    {
+        if (string.IsNullOrEmpty(PlayerNameInputField.text))
+        {
+            PhotonNetwork.NickName = "Player" + Random.Range(0, 1000).ToString("0000");
+        }
+        else
+            PhotonNetwork.NickName = PlayerNameInputField.text ;
+    }
     public void CreateRoom()
     {
         if (string.IsNullOrEmpty(roomNameInputField.text))
