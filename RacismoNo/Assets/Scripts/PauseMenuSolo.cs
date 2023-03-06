@@ -42,11 +42,13 @@ public class PauseMenuSolo : MonoBehaviour
     
     public void RetourAccueil()
     {
+        isPaused = false;
         SceneManager.LoadScene("Lancement");
     }
     
     public void Quitter()
     {
+        isPaused = false;
         Application.Quit();
     }
 }

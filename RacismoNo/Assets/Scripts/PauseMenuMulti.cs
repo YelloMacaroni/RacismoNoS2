@@ -43,12 +43,14 @@ public class PauseMenuMulti : MonoBehaviour
     
     public void RetourAccueil()
     {
+        isPaused = false;
         PhotonNetwork.Disconnect();
         SceneManager.LoadScene("Lancement");
     }
     
     public void Quitter()
     {
+        isPaused = false;
         PhotonNetwork.Disconnect();
         Application.Quit();
     }
