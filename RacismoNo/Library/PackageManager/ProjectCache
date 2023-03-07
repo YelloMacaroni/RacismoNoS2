@@ -5,11 +5,7 @@ m_ProjectFiles:
     m_ContentTrackingEnabled: 1
     m_ModificationDate:
       serializedVersion: 2
-<<<<<<< HEAD
       ticks: 638138008914938706
-=======
-      ticks: 638137969699010625
->>>>>>> 9b7dac2b1bfa5a93120652c6891c8d4f4462d6bf
     m_Hash: 1428860996
   m_LockFileStatus:
     m_FilePath: D:/PROJETS2/unity-RacismoNo/E/RacismoNoS2/RacismoNo/Packages/packages-lock.json
@@ -17,11 +13,7 @@ m_ProjectFiles:
     m_ContentTrackingEnabled: 1
     m_ModificationDate:
       serializedVersion: 2
-<<<<<<< HEAD
       ticks: 638138008916101241
-=======
-      ticks: 638137969699200602
->>>>>>> 9b7dac2b1bfa5a93120652c6891c8d4f4462d6bf
     m_Hash: 4289415759
 m_EmbeddedPackageManifests:
   m_ManifestsStatus: {}
@@ -499,11 +491,7 @@ m_ResolvedPackages:
   isDirectDependency: 1
   version: 5.0.6
   source: 1
-<<<<<<< HEAD
   resolvedPath: D:\PROJETS2\unity-RacismoNo\E\RacismoNoS2\RacismoNo\Library\PackageCache\com.unity.probuilder@5.0.6
-=======
-  resolvedPath: C:\TravailEpita\TESTREPARAGE\RacismoNoS2\RacismoNo\Library\PackageCache\com.unity.probuilder@5.0.6
->>>>>>> 9b7dac2b1bfa5a93120652c6891c8d4f4462d6bf
   assetPath: Packages/com.unity.probuilder
   name: com.unity.probuilder
   displayName: ProBuilder
@@ -3052,11 +3040,7 @@ m_ResolvedPackages:
   isDirectDependency: 0
   version: 1.0.3
   source: 1
-<<<<<<< HEAD
   resolvedPath: D:\PROJETS2\unity-RacismoNo\E\RacismoNoS2\RacismoNo\Library\PackageCache\com.unity.settings-manager@1.0.3
-=======
-  resolvedPath: C:\TravailEpita\TESTREPARAGE\RacismoNoS2\RacismoNo\Library\PackageCache\com.unity.settings-manager@1.0.3
->>>>>>> 9b7dac2b1bfa5a93120652c6891c8d4f4462d6bf
   assetPath: Packages/com.unity.settings-manager
   name: com.unity.settings-manager
   displayName: Settings Manager
