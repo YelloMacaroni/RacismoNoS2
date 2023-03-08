@@ -419,6 +419,7 @@ MonoBehaviour:
   canSprint: 1
   canCrouch: 1
   canUseHeadBob: 1
+  useFootsteps: 1
   sprintKey: 304
   crouchKey: 306
   walkSpeed: 3
@@ -440,6 +441,20 @@ MonoBehaviour:
   sprintBobAmount: 0.11
   crouchBobSpeed: 8
   crouchBobAmount: 0.025
+  baseStepSpeed: 0.5
+  crouchStepMultipler: 1.5
+  sprintStepMultipler: 0.6
+  footstepAudioSource: {fileID: 0}
+  woodClips:
+  - {fileID: 8300000, guid: 505a015d5525e0442ae4a62d5bac304d, type: 3}
+  - {fileID: 8300000, guid: 8e001351cd7065543a068386cde4c960, type: 3}
+  grassClips:
+  - {fileID: 8300000, guid: afc81148cf88b3c48bfbd59d42bdfa91, type: 3}
+  - {fileID: 8300000, guid: 5f6ab9d30af9a364fbb34fdaa71d18f9, type: 3}
+  - {fileID: 8300000, guid: d848f6efc7d8df1469775a21c5a7846a, type: 3}
+  metalClips:
+  - {fileID: 8300000, guid: b25225c72201cd740b16b95b86d57940, type: 3}
+  - {fileID: 8300000, guid: 5e265270fb85126479eef52d8fce3b08, type: 3}
   playerCamera: {fileID: 0}
 --- !u!1001 &8595063854676131002
 PrefabInstance:

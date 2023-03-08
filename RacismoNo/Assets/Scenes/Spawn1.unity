@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.13253035, g: 0.1418004, b: 0.13208383, a: 1}
+  m_IndirectSpecularColor: {r: 0.1325495, g: 0.14182954, b: 0.13212396, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -697,6 +697,7 @@ MonoBehaviour:
   canSprint: 1
   canCrouch: 1
   canUseHeadBob: 1
+  useFootsteps: 1
   sprintKey: 304
   crouchKey: 306
   walkSpeed: 3
@@ -718,6 +719,13 @@ MonoBehaviour:
   sprintBobAmount: 0.11
   crouchBobSpeed: 8
   crouchBobAmount: 0.025
+  baseStepSpeed: 0.5
+  crouchStepMultipler: 1.5
+  sprintStepMultipler: 0.6
+  footstepAudioSource: {fileID: 0}
+  woodClips: []
+  grassClips: []
+  metalClips: []
 --- !u!143 &158376908
 CharacterController:
   m_ObjectHideFlags: 0
@@ -9039,7 +9047,7 @@ GameObject:
   - component: {fileID: 250573976}
   m_Layer: 0
   m_Name: Cube (2)
-  m_TagString: Untagged
+  m_TagString: Footsteps/GRASS
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -9226,7 +9234,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-23924
+  m_Name: pb_Mesh36448
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -20542,7 +20550,7 @@ GameObject:
   - component: {fileID: 1449430253}
   m_Layer: 0
   m_Name: Cube (1)
-  m_TagString: Untagged
+  m_TagString: Footsteps/GRASS
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

@@ -14,6 +14,7 @@ public class MultiMove : MonoBehaviourPunCallbacks
     [SerializeField]private bool canSprint=true;
     [SerializeField]private bool canCrouch=true;
     [SerializeField]private bool canUseHeadBob=true;
+    [SerializeField]private bool useFootsteps =true;
 
     [Header("Controls")]
     [SerializeField]private KeyCode sprintKey=KeyCode.LeftShift;
@@ -45,6 +46,18 @@ public class MultiMove : MonoBehaviourPunCallbacks
     [SerializeField]private float sprintBobAmount = 0.11f;
     [SerializeField]private float crouchBobSpeed = 8f;
     [SerializeField]private float crouchBobAmount = 0.025f;
+
+
+    [Header("Footsteps Parameters")]
+    [SerializeField]private float baseStepSpeed= 0.5f;
+    [SerializeField]private float crouchStepMultipler = 1.5f;
+    [SerializeField]private float sprintStepMultipler = 0.6f;
+    [SerializeField]private AudioSource footstepAudioSource=default;
+    [SerializeField]private AudioClip [] woodClips= default;
+    [SerializeField]private AudioClip [] grassClips= default;
+    [SerializeField]private AudioClip [] metalClips= default;
+    private float footstepTimer=0;
+    private float GetCurrentOffSet => isCrouching ? baseStepSpeed * crouchStepMultipler : isSprinting? baseStepSpeed * sprintStepMultipler:baseStepSpeed;
     private float defaultYPos=0;
     private float timer;
     
@@ -87,6 +100,8 @@ public class MultiMove : MonoBehaviourPunCallbacks
                         HandleCrouch();
                     if (canUseHeadBob)
                         HandleHeadbob();
+                    if (useFootsteps)
+                        Handle_Footsteps();
                     ApplyFinalMovements();
                 }
             }
@@ -154,6 +169,35 @@ public class MultiMove : MonoBehaviourPunCallbacks
                 defaultYPos+Mathf.Sin(timer)*(isCrouching ? crouchBobAmount : isSprinting? sprintBobAmount:walkBobAmount),
                 playerCamera.transform.localPosition.z);
         }
+    }
+    private void Handle_Footsteps()
+    {
+        if(!characterController.isGrounded) return;
+        if(currentInput==Vector2.zero)return;
+        footstepTimer-=Time.deltaTime;
+        if(footstepTimer<=0)
+            {
+                if(Physics.Raycast(playerCamera.transform.position,Vector3.down,out RaycastHit hit,3))
+                {
+                    switch (hit.collider.tag)
+                    {
+                        case "Footsteps/WOOD":
+                            footstepAudioSource.PlayOneShot(woodClips[Random.Range(0,woodClips.Length-1)]);
+                            break;
+                        case "Footsteps/METAL":
+                            footstepAudioSource.PlayOneShot(metalClips[Random.Range(0,metalClips.Length-1)]);
+                            break;
+                        case "Footsteps/GRASS":
+                            footstepAudioSource.PlayOneShot(grassClips[Random.Range(0,grassClips.Length-1)]); 
+                            break;
+                        default:
+                            footstepAudioSource.PlayOneShot(grassClips[Random.Range(0,grassClips.Length-1)]); 
+                            break;
+                        
+                    }
+                }
+                footstepTimer=GetCurrentOffSet;
+            }
     }
     private void ApplyFinalMovements()
     {
