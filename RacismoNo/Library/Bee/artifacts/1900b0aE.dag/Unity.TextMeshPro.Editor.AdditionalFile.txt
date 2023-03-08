@@ -1,5 +1,1 @@
-<<<<<<< HEAD
-D:\PROJETS2\unity-RacismoNo\A\RacismoNoS2\RacismoNo
-=======
-C:\Users\Téo\Desktop\uytfu\RacismoNoS2\RacismoNo
->>>>>>> fa3bcd94eca899621c3e20497fd697220cf9c354
+C:\TravailEpita\TESTREPARAGE\RacismoNoS2\RacismoNo
