@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.10322461, g: 0.101108074, b: 0.079000235, a: 1}
+  m_IndirectSpecularColor: {r: 0.103128396, g: 0.100983135, b: 0.078858174, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -6689,7 +6689,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: -8679921383154817045, guid: 1669af08ae7bfb94799cea77394dee89, type: 3}
       propertyPath: m_RootOrder
-      value: 3
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 1669af08ae7bfb94799cea77394dee89, type: 3}
       propertyPath: m_LocalPosition.x
@@ -7358,7 +7358,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8550a8556d02e2d489e514c30431d7d9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerPrefab: {fileID: 3797159965948427884, guid: 5961862d894dce14689edec4dadbb744, type: 3}
+  playerPrefab: {fileID: 1464319062381613897, guid: 5961862d894dce14689edec4dadbb744, type: 3}
   playersolo: {fileID: 245510523}
 --- !u!4 &302989037
 Transform:
@@ -15830,6 +15830,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 627975925204963555, guid: 5961862d894dce14689edec4dadbb744, type: 3}
+      propertyPath: m_RootOrder
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 1262243518437231796, guid: 5961862d894dce14689edec4dadbb744, type: 3}
       propertyPath: m_Enabled
       value: 0
@@ -15887,6 +15891,30 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1464319062381614002, guid: 5961862d894dce14689edec4dadbb744, type: 3}
+      propertyPath: sceneViewId
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2894630265873109454, guid: 5961862d894dce14689edec4dadbb744, type: 3}
+      propertyPath: m_RootOrder
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 5171047904527785604, guid: 5961862d894dce14689edec4dadbb744, type: 3}
+      propertyPath: m_RootOrder
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 6975597794990895156, guid: 5961862d894dce14689edec4dadbb744, type: 3}
+      propertyPath: sceneViewId
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6975597794990895156, guid: 5961862d894dce14689edec4dadbb744, type: 3}
+      propertyPath: ObservedComponents.Array.size
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6979801855538333928, guid: 5961862d894dce14689edec4dadbb744, type: 3}
+      propertyPath: m_RootOrder
+      value: 11
+      objectReference: {fileID: 0}
+    - target: {fileID: 8391197574963907186, guid: 5961862d894dce14689edec4dadbb744, type: 3}
       propertyPath: sceneViewId
       value: 2
       objectReference: {fileID: 0}
