@@ -35,6 +35,8 @@ public class PauseMenuMulti : MonoBehaviourPunCallbacks
         isPaused = true;
         Cursor.lockState = CursorLockMode.None;
         Cursor.visible = true;
+        if (!PhotonNetwork.IsConnected)
+            Time.timeScale = 0f;
     }
     
     public void ResumeGame()
@@ -43,6 +45,8 @@ public class PauseMenuMulti : MonoBehaviourPunCallbacks
         Cursor.visible = false;
         pauseMenu.SetActive(false);
         isPaused = false;
+        if (!PhotonNetwork.IsConnected)
+            Time.timeScale = 1f;
     }
     
     public void RetourAccueil()
@@ -50,7 +54,11 @@ public class PauseMenuMulti : MonoBehaviourPunCallbacks
         isPaused = false;
         Cursor.lockState = CursorLockMode.None;
         Cursor.visible = true;
-        PhotonNetwork.Disconnect();
+        if (PhotonNetwork.IsConnected)
+            PhotonNetwork.Disconnect();
+        else
+            Time.timeScale = 1f;
+            SceneManager.LoadScene("Lancement");
     }
 
     public override void OnDisconnected(DisconnectCause cause)
@@ -61,7 +69,8 @@ public class PauseMenuMulti : MonoBehaviourPunCallbacks
     public void Quitter()
     {
         isPaused = false;
-        PhotonNetwork.Disconnect();
+        if (PhotonNetwork.IsConnected)
+            PhotonNetwork.Disconnect();
         Application.Quit();
     }
 }

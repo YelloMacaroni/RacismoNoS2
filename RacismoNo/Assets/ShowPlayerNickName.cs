@@ -10,7 +10,8 @@ public class ShowPlayerNickName : MonoBehaviourPunCallbacks
     // Start is called before the first frame update
     void Start()
     {
-        GetComponent<TMP_Text>().text = photonView.Owner.NickName;
+        if (PhotonNetwork.IsConnected)
+            GetComponent<TMP_Text>().text = photonView.Owner.NickName;
     }
 
     

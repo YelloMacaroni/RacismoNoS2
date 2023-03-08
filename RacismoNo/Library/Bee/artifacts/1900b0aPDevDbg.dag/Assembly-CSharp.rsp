@@ -99,6 +99,7 @@
 -define:DEBUG
 -define:TRACE
 -define:UNITY_ASSERTIONS
+-define:UNITY_PRO_LICENSE
 -define:ENABLE_CUSTOM_RENDER_TEXTURE
 -define:ENABLE_DIRECTOR
 -define:ENABLE_LOCALIZATION
@@ -112,6 +113,7 @@
 -define:PUN_2_0_OR_NEWER
 -define:PUN_2_OR_NEWER
 -define:PUN_2_19_OR_NEWER
+-define:PROBUILDER_EXPERIMENTAL_FEATURES
 -define:CSHARP_7_OR_LATER
 -define:CSHARP_7_3_OR_NEWER
 -r:"Assets/Photon/PhotonLibs/netstandard2.0/Photon3Unity3D.dll"
@@ -312,6 +314,7 @@
 -r:"Library/Bee/artifacts/1900b0aPDevDbg.dag/PhotonUnityNetworking.Demos.ref.dll"
 -r:"Library/Bee/artifacts/1900b0aPDevDbg.dag/PhotonUnityNetworking.ref.dll"
 -r:"Library/Bee/artifacts/1900b0aPDevDbg.dag/PhotonUnityNetworking.Utilities.ref.dll"
+-r:"Library/Bee/artifacts/1900b0aPDevDbg.dag/Unity.ProBuilder.ref.dll"
 -r:"Library/Bee/artifacts/1900b0aPDevDbg.dag/Unity.Services.Core.Analytics.ref.dll"
 -r:"Library/Bee/artifacts/1900b0aPDevDbg.dag/Unity.Services.Core.Environments.ref.dll"
 -r:"Library/Bee/artifacts/1900b0aPDevDbg.dag/Unity.Services.Core.ref.dll"
@@ -322,7 +325,6 @@
 -r:"Library/Bee/artifacts/1900b0aPDevDbg.dag/Unity.VisualScripting.State.ref.dll"
 -r:"Library/Bee/artifacts/1900b0aPDevDbg.dag/UnityEngine.UI.ref.dll"
 "Assets/Code/PlayerControls/MultiMove.cs"
-"Assets/Code/PlayerControls/PlayerMove.cs"
 "Assets/ConnectToServer.cs"
 "Assets/CreateAndJoinRooms.cs"
 "Assets/Menu.cs"

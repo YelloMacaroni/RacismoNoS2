@@ -69,7 +69,7 @@ public class Launcher : MonoBehaviourPunCallbacks
     }
     public void StartGame()
     {
-        PhotonNetwork.LoadLevel("MultiplayerGame");
+        PhotonNetwork.LoadLevel("Spawn1");
     }
     public override void OnJoinedRoom()
     {
