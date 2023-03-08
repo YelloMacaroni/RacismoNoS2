@@ -177,6 +177,7 @@ public class MultiMove : MonoBehaviourPunCallbacks
         footstepTimer-=Time.deltaTime;
         if(footstepTimer<=0)
             {
+                footstepAudioSource.pitch = Random.Range(0.9f, 1.1f);
                 if(Physics.Raycast(playerCamera.transform.position,Vector3.down,out RaycastHit hit,3))
                 {
                     switch (hit.collider.tag)
@@ -191,7 +192,7 @@ public class MultiMove : MonoBehaviourPunCallbacks
                             footstepAudioSource.PlayOneShot(grassClips[Random.Range(0,grassClips.Length-1)]); 
                             break;
                         default:
-                            footstepAudioSource.PlayOneShot(grassClips[Random.Range(0,grassClips.Length-1)]); 
+                            footstepAudioSource.PlayOneShot(metalClips[Random.Range(0,metalClips.Length-1)]);
                             break;
                         
                     }
