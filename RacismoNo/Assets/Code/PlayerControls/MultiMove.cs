@@ -5,6 +5,7 @@ using Photon.Pun;
 
 public class MultiMove : MonoBehaviourPunCallbacks
 {
+    
     public bool CanMove { get; private set;}=true;  
     private bool isSprinting => canSprint && Input.GetKey(sprintKey);
     private bool shouldCrouch => Input.GetKey(crouchKey) && !duringCrouchAnimation && characterController.isGrounded;
@@ -95,6 +96,7 @@ public class MultiMove : MonoBehaviourPunCallbacks
                 if (CanMove)
                 {
                     HandleMovementInput();
+                    
                     HandleMouseLook();
                     if (canCrouch)
                         HandleCrouch();
@@ -103,7 +105,7 @@ public class MultiMove : MonoBehaviourPunCallbacks
                     if (useFootsteps)
                         Handle_Footsteps();
                     ApplyFinalMovements();
-                }
+                } 
             }
         }
     }
