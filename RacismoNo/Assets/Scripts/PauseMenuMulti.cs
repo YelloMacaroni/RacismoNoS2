@@ -33,7 +33,7 @@ public class PauseMenuMulti : MonoBehaviourPunCallbacks
     {
         pauseMenu.SetActive(true);
         isPaused = true;
-        Cursor.lockState = CursorLockMode.None;
+        Cursor.lockState = CursorLockMode.Confined;
         Cursor.visible = true;
         if (!PhotonNetwork.IsConnected)
             Time.timeScale = 0f;
