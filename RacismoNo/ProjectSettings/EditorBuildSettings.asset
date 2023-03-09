@@ -5,13 +5,16 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Lancement.unity
     guid: be82feed74c900741befbed4fad84b6b
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/MultiplayerInterface.unity
     guid: 29b8b046aa908fb47aa3af29bacce60b
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Spawn1.unity
     guid: d855b94e0b01b2d44be37945e032b537
+  - enabled: 1
+    path: Assets/Scenes/LUCAS.unity
+    guid: ec55fe41b573f1443892fb75b96012d0
   m_configObjects: {}

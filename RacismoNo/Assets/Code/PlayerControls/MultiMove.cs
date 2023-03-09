@@ -5,10 +5,10 @@ using Photon.Pun;
 
 public class MultiMove : MonoBehaviourPunCallbacks
 {
-    
+    Animator animator;
     public bool CanMove { get; private set;}=true;  
     private bool isSprinting => canSprint && Input.GetKey(sprintKey);
-    private bool shouldCrouch => Input.GetKey(crouchKey) && !duringCrouchAnimation && characterController.isGrounded;
+    private bool shouldCrouch => canCrouch && Input.GetKey(crouchKey) && !duringCrouchAnimation && characterController.isGrounded;
     
     
     [Header("Functional Options")]
@@ -20,6 +20,12 @@ public class MultiMove : MonoBehaviourPunCallbacks
     [Header("Controls")]
     [SerializeField]private KeyCode sprintKey=KeyCode.LeftShift;
     [SerializeField]private KeyCode crouchKey=KeyCode.LeftControl;
+   
+
+    [Header("Animations")]
+    [SerializeField]int isWalkingHash;
+    [SerializeField]int isRunningHash;
+    [SerializeField]int isCrouchingHash;
 
     [Header("Movement Parameters")]
     [SerializeField]private float walkSpeed = 3.0f;
@@ -75,6 +81,10 @@ public class MultiMove : MonoBehaviourPunCallbacks
 
     private void Start()
     {
+        animator=GetComponent<Animator>();
+        isWalkingHash=Animator.StringToHash("canWalk");
+        isRunningHash=Animator.StringToHash("canRun");
+        isCrouchingHash=Animator.StringToHash("canCrouch");
         playerCamera = GetComponentInChildren<Camera>();
         characterController = GetComponent<CharacterController>();
         defaultYPos = playerCamera.transform.localPosition.y;
@@ -96,7 +106,7 @@ public class MultiMove : MonoBehaviourPunCallbacks
                 if (CanMove)
                 {
                     HandleMovementInput();
-                    
+                    HandleAnimations();
                     HandleMouseLook();
                     if (canCrouch)
                         HandleCrouch();
@@ -113,10 +123,38 @@ public class MultiMove : MonoBehaviourPunCallbacks
     private void HandleMovementInput()
     {
         currentInput=new Vector2((isCrouching ? crouchSpeed:isSprinting ? sprintSpeed  :walkSpeed)*Input.GetAxis("Vertical"),( isCrouching ? crouchSpeed:isSprinting ? sprintSpeed  : walkSpeed)*Input.GetAxis("Horizontal"));
-
         float moveDirectionY= moveDirection.y;
         moveDirection=(transform.TransformDirection(Vector3.forward)*currentInput.x)+(transform.TransformDirection(Vector3.right)*currentInput.y);
         moveDirection.y=moveDirectionY;
+     
+    }
+
+    private void HandleAnimations()
+    {
+        bool isRunning=animator.GetBool(isRunningHash);
+        bool isWalking=animator.GetBool(isWalkingHash);
+        bool isCrouch=animator.GetBool(isCrouchingHash);
+        bool forwardPressed=(Input.GetKey("w"));
+        bool backwardPressed=(Input.GetKey("s"));
+        bool runPressed=Input.GetKey("left shift");
+        if (!isWalking && forwardPressed)
+            animator.SetBool("canWalk",true);
+        if (isWalking && !forwardPressed)
+            animator.SetBool("canWalk",false);
+        if (!isWalking && backwardPressed)
+            animator.SetBool("canWalkback",true);
+        if (isWalking && !backwardPressed)
+            animator.SetBool("canWalkback",false);
+        if (!isRunning && forwardPressed && runPressed)
+            animator.SetBool("canRun",true);
+        if (isRunning && (!forwardPressed || !runPressed))
+            animator.SetBool("canRun",false);
+        if (!isCrouch && shouldCrouch)
+            animator.SetBool("canCrouch",true);
+        if (isCrouch &&  shouldCrouch)
+            animator.SetBool("canCrouch",false);
+        
+        
     }
     
     private void HandleMouseLook()
@@ -156,7 +194,8 @@ public class MultiMove : MonoBehaviourPunCallbacks
         
         characterController.height=targetHeight;
         characterController.center=targetCenter;
-        isCrouching = !isCrouching;
+        if(!Input.GetKey(crouchKey))
+            isCrouching = !isCrouching;
         duringCrouchAnimation = false;
     }
     private void HandleHeadbob()
@@ -211,22 +250,7 @@ public class MultiMove : MonoBehaviourPunCallbacks
     
     
     
-    public void esc()
-    {
-
-    }
-    public void e()
-    {
-
-    }
-    public void f()
-    {
-
-    }
-    public void click()
-    {
-
-    }
+    
 
 }
 
