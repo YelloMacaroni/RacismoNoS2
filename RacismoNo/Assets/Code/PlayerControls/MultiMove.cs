@@ -101,7 +101,7 @@ public class MultiMove : MonoBehaviourPunCallbacks
     {
         if (photonView.IsMine)
         {
-            if (!PauseMenuMulti.isPaused)
+            if (Cursor.visible == false)
             {
                 if (CanMove)
                 {

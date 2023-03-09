@@ -9,7 +9,7 @@ using UnityEngine.SceneManagement;
 public class PauseMenuMulti : MonoBehaviourPunCallbacks
 {
     public GameObject pauseMenu;
-    public static bool isPaused;
+    private bool isPaused;
 
     
     void Start()
@@ -41,10 +41,10 @@ public class PauseMenuMulti : MonoBehaviourPunCallbacks
     
     public void ResumeGame()
     {
-        Cursor.lockState = CursorLockMode.Locked;
-        Cursor.visible = false;
-        pauseMenu.SetActive(false);
         isPaused = false;
+        Cursor.visible = false;
+        Cursor.lockState = CursorLockMode.Locked;
+        pauseMenu.SetActive(false);
         if (!PhotonNetwork.IsConnected)
             Time.timeScale = 1f;
     }
