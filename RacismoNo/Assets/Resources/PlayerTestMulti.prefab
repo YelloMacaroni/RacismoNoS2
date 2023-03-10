@@ -2241,8 +2241,8 @@ MonoBehaviour:
   lookSpeedY: 2
   upperLookLimit: 80
   lowerLookLimit: 80
-  crouchHeight: 0.5
-  StandingHeight: 2
+  crouchHeight: 0.7
+  StandingHeight: 0
   timetoCrouch: 0.25
   crouchingCenter: {x: 0, y: 0.5, z: 0}
   standingCenter: {x: 0, y: 0, z: 0}
