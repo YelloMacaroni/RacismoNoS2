@@ -14,4 +14,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Spawn1.unity
     guid: d855b94e0b01b2d44be37945e032b537
+  - enabled: 0
+    path: Assets/Scenes/LUCAS.unity
+    guid: ec55fe41b573f1443892fb75b96012d0
   m_configObjects: {}
