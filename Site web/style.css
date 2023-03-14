@@ -65,6 +65,12 @@
   font-weight: 100;
   line-height: 35px;
 }
+.content p2{
+  font-size: 15px;
+  margin: 10px auto;
+  font-weight: 100;
+  line-height: 30px;
+}
 button{
   width: 400px;
   padding: 30px 0;
