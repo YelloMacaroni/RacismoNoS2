@@ -20,7 +20,7 @@ public class MultiMove : MonoBehaviourPunCallbacks
     [Header("Controls")]
     [SerializeField]private KeyCode sprintKey=KeyCode.LeftShift;
     [SerializeField]private KeyCode crouchKey=KeyCode.LeftControl;
-   
+
 
     [Header("Animations")]
     [SerializeField]int isWalkingHash;

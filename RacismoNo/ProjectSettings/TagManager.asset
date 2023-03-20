@@ -7,6 +7,9 @@ TagManager:
   - Footsteps/WOOD
   - Footsteps/GRASS
   - Footsteps/METAL
+  - toiletteDoor
+  - lab 1 door
+  - lab 2 door
   layers:
   - Default
   - TransparentFX
