@@ -70,6 +70,14 @@ public class scriptDoor : MonoBehaviour
                             }
                         }
                         break;
+                    case "key lab 1":
+                        Destroy(hit.transform.gameObject);
+                        keyLab1Owned = true;
+                        break;
+                    case "key lab 2":
+                        Destroy(hit.transform.gameObject);
+                        keyLab2Owned = true;
+                        break;
                     default:
                         if (hit.transform.GetComponent<Animator>() != null)
                         {
