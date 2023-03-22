@@ -9551,7 +9551,6 @@ GameObject:
   - component: {fileID: 355783845}
   - component: {fileID: 355783844}
   - component: {fileID: 355783843}
-  - component: {fileID: 355783847}
   m_Layer: 0
   m_Name: Plane
   m_TagString: Footsteps/METAL
@@ -9638,19 +9637,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &355783847
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 355783842}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 39e70241e513542499c98225d9555b13, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  sound: {fileID: 0}
 --- !u!850595691 &393227192
 LightingSettings:
   m_ObjectHideFlags: 0
@@ -13423,12 +13409,16 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 1464319062381614000, guid: 5961862d894dce14689edec4dadbb744, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1464319062381614000, guid: 5961862d894dce14689edec4dadbb744, type: 3}
       propertyPath: m_LocalPosition.y
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1464319062381614000, guid: 5961862d894dce14689edec4dadbb744, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0.11
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2187360259353167336, guid: 5961862d894dce14689edec4dadbb744, type: 3}
       propertyPath: sceneViewId

@@ -2231,8 +2231,18 @@ MonoBehaviour:
   sprintKey: 304
   crouchKey: 306
   isWalkingHash: 0
+  isWalkingHashBack: 0
+  isWalkingHashRight: 0
+  isWalkingHashLeft: 0
   isRunningHash: 0
+  isRunningHashBack: 0
+  isRunningHashRight: 0
+  isRunningHashLeft: 0
   isCrouchingHash: 0
+  isCrouchingHashFront: 0
+  isCrouchingHashBack: 0
+  isCrouchingHashRight: 0
+  isCrouchingHashLeft: 0
   walkSpeed: 3
   sprintSpeed: 6
   crouchSpeed: 1.5
@@ -2326,6 +2336,33 @@ MonoBehaviour:
   - Type: 4
     SynchronizeType: 2
     Name: canWalkback
+  - Type: 4
+    SynchronizeType: 0
+    Name: canWalkRight
+  - Type: 4
+    SynchronizeType: 0
+    Name: canWalkLeft
+  - Type: 4
+    SynchronizeType: 0
+    Name: canRunBack
+  - Type: 4
+    SynchronizeType: 0
+    Name: canRunLeft
+  - Type: 4
+    SynchronizeType: 0
+    Name: canRunRight
+  - Type: 4
+    SynchronizeType: 0
+    Name: Crouch
+  - Type: 4
+    SynchronizeType: 0
+    Name: canCrouchRight
+  - Type: 4
+    SynchronizeType: 0
+    Name: canCrouchLeft
+  - Type: 4
+    SynchronizeType: 0
+    Name: canCrouchBack
   m_SynchronizeLayers:
   - SynchronizeType: 2
     LayerIndex: 0
@@ -4213,7 +4250,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5385425056420640821}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 3.77, z: 0.49}
+  m_LocalPosition: {x: 0, y: 3.7, z: 0.28999996}
   m_LocalScale: {x: 1333, y: 1333, z: 1333}
   m_ConstrainProportionsScale: 0
   m_Children: []
