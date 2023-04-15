@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using Photon.Pun;
+using UnityEngine.UI;
 
 public class MultiMove : MonoBehaviourPunCallbacks
 {
@@ -264,6 +265,13 @@ public class MultiMove : MonoBehaviourPunCallbacks
             StartCoroutine(CrouchStand());
     }
     
+    public Slider slider;
+
+    public void SettingsSentitivity()
+    {
+        lookSpeedX = slider.value;
+        lookSpeedY = slider.value;
+    }
     private IEnumerator CrouchStand()
     {
         if(isCrouching && Physics.Raycast(playerCamera.transform.position,Vector3.up,1f))

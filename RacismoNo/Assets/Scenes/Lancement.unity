@@ -620,6 +620,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: -8758807324451431487, guid: 95ef754ba3bfd7449bad277f6275eeeb, type: 3}
+      propertyPath: OutputAudioMixerGroup
+      value: 
+      objectReference: {fileID: 24300002, guid: ba0296294328eb34f8499ac22c9998dd, type: 2}
     - target: {fileID: 1795972734240212245, guid: 95ef754ba3bfd7449bad277f6275eeeb, type: 3}
       propertyPath: m_Name
       value: Son Menu
