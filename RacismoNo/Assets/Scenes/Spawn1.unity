@@ -13426,15 +13426,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2153096563865717220, guid: 5961862d894dce14689edec4dadbb744, type: 3}
       propertyPath: m_AnchorMax.x
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2153096563865717220, guid: 5961862d894dce14689edec4dadbb744, type: 3}
       propertyPath: m_AnchorMax.y
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2153096563865717220, guid: 5961862d894dce14689edec4dadbb744, type: 3}
       propertyPath: m_AnchorMin.x
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2187360259353167336, guid: 5961862d894dce14689edec4dadbb744, type: 3}
       propertyPath: sceneViewId
@@ -13474,11 +13474,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3261717056811638964, guid: 5961862d894dce14689edec4dadbb744, type: 3}
       propertyPath: m_AnchorMax.x
-      value: 0.816
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3261717056811638964, guid: 5961862d894dce14689edec4dadbb744, type: 3}
       propertyPath: m_AnchorMax.y
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3797159965948427880, guid: 5961862d894dce14689edec4dadbb744, type: 3}
       propertyPath: m_RootOrder
@@ -13555,7 +13555,7 @@ PrefabInstance:
     - target: {fileID: 7954177039643224510, guid: 5961862d894dce14689edec4dadbb744, type: 3}
       propertyPath: playerCamera
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1237338930}
     - target: {fileID: 7954177039643224510, guid: 5961862d894dce14689edec4dadbb744, type: 3}
       propertyPath: useFootsteps
       value: 1
@@ -13572,17 +13572,21 @@ PrefabInstance:
       propertyPath: sprintStepMultipler
       value: 0.6
       objectReference: {fileID: 0}
+    - target: {fileID: 7954177039643224510, guid: 5961862d894dce14689edec4dadbb744, type: 3}
+      propertyPath: playerCameraToDestroy
+      value: 
+      objectReference: {fileID: 1237338931}
     - target: {fileID: 7993419092044032788, guid: 5961862d894dce14689edec4dadbb744, type: 3}
       propertyPath: m_AnchorMax.x
-      value: 0.816
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7993419092044032788, guid: 5961862d894dce14689edec4dadbb744, type: 3}
       propertyPath: m_AnchorMax.y
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7993419092044032788, guid: 5961862d894dce14689edec4dadbb744, type: 3}
       propertyPath: m_AnchorMin.x
-      value: 0.816
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8391197574963907186, guid: 5961862d894dce14689edec4dadbb744, type: 3}
       propertyPath: sceneViewId
@@ -13626,17 +13630,27 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8815290072228237671, guid: 5961862d894dce14689edec4dadbb744, type: 3}
       propertyPath: m_AnchorMax.x
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8815290072228237671, guid: 5961862d894dce14689edec4dadbb744, type: 3}
       propertyPath: m_AnchorMax.y
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5961862d894dce14689edec4dadbb744, type: 3}
 --- !u!1 &1237338929 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1464319062381613897, guid: 5961862d894dce14689edec4dadbb744, type: 3}
+  m_PrefabInstance: {fileID: 1237338928}
+  m_PrefabAsset: {fileID: 0}
+--- !u!20 &1237338930 stripped
+Camera:
+  m_CorrespondingSourceObject: {fileID: 7462474350895609141, guid: 5961862d894dce14689edec4dadbb744, type: 3}
+  m_PrefabInstance: {fileID: 1237338928}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1237338931 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5385425056420640821, guid: 5961862d894dce14689edec4dadbb744, type: 3}
   m_PrefabInstance: {fileID: 1237338928}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &1242518737

@@ -2917,6 +2917,7 @@ MonoBehaviour:
   - {fileID: 8300000, guid: b25225c72201cd740b16b95b86d57940, type: 3}
   - {fileID: 8300000, guid: 5e265270fb85126479eef52d8fce3b08, type: 3}
   playerCamera: {fileID: 7462474350895609141}
+  playerCameraToDestroy: {fileID: 5385425056420640821}
   slider: {fileID: 7334134817216754847}
 --- !u!114 &-2249153258658327057
 MonoBehaviour:
@@ -5983,7 +5984,7 @@ RectTransform:
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 1, y: 1}
+  m_AnchorMax: {x: 0.5, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 10, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -6194,7 +6195,7 @@ RectTransform:
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0.816, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 10, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -6961,8 +6962,8 @@ RectTransform:
   m_Father: {fileID: 8392199066096563269}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.816, y: 0}
-  m_AnchorMax: {x: 0.816, y: 1}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 20, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -7037,8 +7038,8 @@ RectTransform:
   m_Father: {fileID: 7903099697483751301}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 1, y: 0}
-  m_AnchorMax: {x: 1, y: 1}
+  m_AnchorMin: {x: 0.5, y: 0}
+  m_AnchorMax: {x: 0.5, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 20, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -7513,7 +7514,7 @@ MonoBehaviour:
   m_MinValue: 1
   m_MaxValue: 10
   m_WholeNumbers: 0
-  m_Value: 0.816
+  m_Value: 1
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls:

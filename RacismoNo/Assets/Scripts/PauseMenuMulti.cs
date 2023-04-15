@@ -10,8 +10,8 @@ public class PauseMenuMulti : MonoBehaviourPunCallbacks
 {
     public GameObject pauseMenu;
     public GameObject SettingsMenu;
-    private bool isPaused;
-    private bool isInSettings;
+    private bool isPaused = false;
+    private bool isInSettings = false;
 
     
     void Start()
@@ -34,7 +34,8 @@ public class PauseMenuMulti : MonoBehaviourPunCallbacks
 
     public void PauseGame()
     {
-        pauseMenu.SetActive(true);
+        if (photonView.IsMine)
+        {pauseMenu.SetActive(true);
         isPaused = true;
         Cursor.lockState = CursorLockMode.Confined;
         Cursor.visible = true;
@@ -42,33 +43,34 @@ public class PauseMenuMulti : MonoBehaviourPunCallbacks
             Time.timeScale = 0f;
         if (isInSettings)
             {SettingsMenu.SetActive(false);
-            isInSettings = false;}
+            isInSettings = false;}}
 
     }
 
     public void SettingsOpen()
     {
-        isInSettings = true;
+        if (photonView.IsMine)
+        {isInSettings = true;
         SettingsMenu.SetActive(true);
         pauseMenu.SetActive(false);
         isPaused = true;
         Cursor.lockState = CursorLockMode.Confined;
         Cursor.visible = true;
         if (!PhotonNetwork.IsConnected)
-            Time.timeScale = 0f;
+            Time.timeScale = 0f;}
     }
     
     public void ResumeGame()
     {
-        isPaused = false;
-        Cursor.visible = false;
+        if (photonView.IsMine)
+        {Cursor.visible = false;
         Cursor.lockState = CursorLockMode.Locked;
         pauseMenu.SetActive(false);
-        if (!PhotonNetwork.IsConnected)
-            Time.timeScale = 1f;
+        Time.timeScale = 1f;
         if (isInSettings)
             {SettingsMenu.SetActive(false);
             isInSettings = false;}
+        isPaused = false;}
     }
     
     public void RetourAccueil()

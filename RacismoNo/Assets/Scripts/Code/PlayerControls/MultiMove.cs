@@ -85,6 +85,7 @@ public class MultiMove : MonoBehaviourPunCallbacks
     private bool duringCrouchAnimation;
 
     [SerializeField] private Camera playerCamera;
+    [SerializeField] private GameObject playerCameraToDestroy;
     private CharacterController characterController;
 
     private Vector3 moveDirection;
@@ -118,7 +119,7 @@ public class MultiMove : MonoBehaviourPunCallbacks
         Cursor.visible = false;
         if (!photonView.IsMine)
         {
-            Destroy(playerCamera);
+            Destroy(playerCameraToDestroy);
         }
     }
 
