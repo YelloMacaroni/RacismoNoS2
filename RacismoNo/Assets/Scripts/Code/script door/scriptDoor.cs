@@ -29,9 +29,9 @@ public class scriptDoor : MonoBehaviour
         if (active)
         {
             print(active);
-            if (Input.GetKeyDown((KeyCode) System.Enum.Parse(typeof(KeyCode),PlayerPrefs.GetString("InteractKey","e"))))
+            if (Input.GetKeyDown(KeyCode.E))
             {
-                print(hit.transform.tag); 
+                print(hit.transform.tag);
                 switch (hit.transform.tag)
                 {
                     case "toiletteDoor":
