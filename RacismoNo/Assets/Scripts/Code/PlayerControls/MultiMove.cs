@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using Photon.Pun;
 using UnityEngine.UI;
-
+//BONJOUR 
 public class MultiMove : MonoBehaviourPunCallbacks
 {
     Animator animator;
