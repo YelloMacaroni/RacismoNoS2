@@ -12,6 +12,8 @@ public class scriptDoor : MonoBehaviour
     [SerializeField] private bool active = false;
     public GameObject key;
     public GameObject nopdoor;
+    public AudioSource keysound;
+    public AudioSource door;
  
 
     
@@ -43,6 +45,7 @@ public class scriptDoor : MonoBehaviour
                             }
                             
                         }
+                        door.Play();
                         break;
                     case "lab 1 door": 
                         if (keyLab1Owned)
@@ -59,7 +62,7 @@ public class scriptDoor : MonoBehaviour
                                 }
                             
                             }
-                            
+                            door.Play();
                         }
                         else
                         {
@@ -83,6 +86,7 @@ public class scriptDoor : MonoBehaviour
                                 }
                                 
                             }
+                            door.Play();
                         }
                         else
                         {
@@ -93,6 +97,7 @@ public class scriptDoor : MonoBehaviour
                         break;
                     case "key lab 1":
                         
+                        keysound.Play();
                         Destroy(hit.transform.gameObject);
                         keyLab1Owned = true;
                         key.SetActive(true);
@@ -101,6 +106,8 @@ public class scriptDoor : MonoBehaviour
                         
                         break;
                     case "key lab 2":
+                        
+                        keysound.Play();
                         Destroy(hit.transform.gameObject);
                         keyLab2Owned = true;
                         key.SetActive(true);
@@ -130,5 +137,6 @@ public class scriptDoor : MonoBehaviour
         nopdoor.SetActive(false);
         key.SetActive(false);
     }
+   
 }
 
