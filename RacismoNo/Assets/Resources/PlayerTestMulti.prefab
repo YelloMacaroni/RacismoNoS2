@@ -2856,10 +2856,7 @@ Transform:
   - {fileID: 627975925204963555}
   - {fileID: 6979801855538333928}
   - {fileID: 2878677126758592172}
-<<<<<<< Updated upstream
   - {fileID: 8646449684956583357}
-=======
->>>>>>> Stashed changes
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -2985,11 +2982,8 @@ MonoBehaviour:
   - {fileID: 8300000, guid: b25225c72201cd740b16b95b86d57940, type: 3}
   - {fileID: 8300000, guid: 5e265270fb85126479eef52d8fce3b08, type: 3}
   playerCamera: {fileID: 7462474350895609141}
-<<<<<<< Updated upstream
   playerCameraToDestroy: {fileID: 5385425056420640821}
   slider: {fileID: 7334134817216754847}
-=======
->>>>>>> Stashed changes
 --- !u!114 &-2249153258658327057
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3003,10 +2997,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pauseMenu: {fileID: 5366435938363798809}
-<<<<<<< Updated upstream
   SettingsMenu: {fileID: 456663092110854259}
-=======
->>>>>>> Stashed changes
 --- !u!95 &-8526039837793056527
 Animator:
   serializedVersion: 5
@@ -3054,7 +3045,6 @@ MonoBehaviour:
   - Type: 4
     SynchronizeType: 2
     Name: canWalkback
-<<<<<<< Updated upstream
   - Type: 4
     SynchronizeType: 2
     Name: canWalkRight
@@ -3082,8 +3072,6 @@ MonoBehaviour:
   - Type: 4
     SynchronizeType: 2
     Name: canCrouchBack
-=======
->>>>>>> Stashed changes
   m_SynchronizeLayers:
   - SynchronizeType: 2
     LayerIndex: 0
@@ -4099,10 +4087,7 @@ GameObject:
   - component: {fileID: 1464319063090686181}
   - component: {fileID: 1464319063090686186}
   - component: {fileID: 4938321507005040469}
-<<<<<<< Updated upstream
   - component: {fileID: 3404938291584606932}
-=======
->>>>>>> Stashed changes
   m_Layer: 0
   m_Name: Shoes
   m_TagString: Untagged
@@ -4194,7 +4179,6 @@ AudioListener:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1464319063090686180}
   m_Enabled: 0
-<<<<<<< Updated upstream
 --- !u!114 &3404938291584606932
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4207,8 +4191,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5645a2f636a48e14ca0f589a29b4495a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-=======
->>>>>>> Stashed changes
 --- !u!1 &1464319063097022599
 GameObject:
   m_ObjectHideFlags: 0
@@ -5149,7 +5131,6 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-<<<<<<< Updated upstream
 --- !u!1 &3121242179547433547
 GameObject:
   m_ObjectHideFlags: 0
@@ -5591,8 +5572,6 @@ MonoBehaviour:
   m_hasFontAssetChanged: 0
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
-=======
->>>>>>> Stashed changes
 --- !u!1 &3614150940445121490
 GameObject:
   m_ObjectHideFlags: 0
@@ -5728,7 +5707,6 @@ MonoBehaviour:
   m_hasFontAssetChanged: 0
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
-<<<<<<< Updated upstream
 --- !u!1 &3958515447158832310
 GameObject:
   m_ObjectHideFlags: 0
@@ -5805,8 +5783,6 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
-=======
->>>>>>> Stashed changes
 --- !u!1 &5164469523461584728
 GameObject:
   m_ObjectHideFlags: 0
@@ -5981,11 +5957,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5385425056420640821}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-<<<<<<< Updated upstream
   m_LocalPosition: {x: 0, y: 3.7, z: 0.01}
-=======
-  m_LocalPosition: {x: 0, y: 3.77, z: 0.49}
->>>>>>> Stashed changes
   m_LocalScale: {x: 1333, y: 1333, z: 1333}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -6023,11 +5995,7 @@ Camera:
   m_Depth: 0
   m_CullingMask:
     serializedVersion: 2
-<<<<<<< Updated upstream
     m_Bits: 55
-=======
-    m_Bits: 4294967295
->>>>>>> Stashed changes
   m_RenderingPath: -1
   m_TargetTexture: {fileID: 0}
   m_TargetDisplay: 0
@@ -6086,7 +6054,6 @@ MonoBehaviour:
   m_SynchronizeRotation: 1
   m_SynchronizeScale: 0
   m_UseLocal: 1
-<<<<<<< Updated upstream
 --- !u!1 &5767088063950668193
 GameObject:
   m_ObjectHideFlags: 0
@@ -6374,8 +6341,6 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
-=======
->>>>>>> Stashed changes
 --- !u!1 &6062589805658235705
 GameObject:
   m_ObjectHideFlags: 0
