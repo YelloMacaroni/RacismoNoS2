@@ -12,6 +12,10 @@ public class scriptDoor : MonoBehaviour
     [SerializeField] private bool active = false;
     public GameObject key;
     public GameObject nopdoor;
+    public AudioSource doorsound;
+
+    public AudioSource keysound1;
+    public AudioSource keysound2;
  
 
     
@@ -43,6 +47,7 @@ public class scriptDoor : MonoBehaviour
                             }
                             
                         }
+                        doorsound.Play();
                         break;
                     case "lab 1 door": 
                         if (keyLab1Owned)
@@ -59,10 +64,11 @@ public class scriptDoor : MonoBehaviour
                                 }
                             
                             }
-                            
+                            doorsound.Play();
                         }
                         else
                         {
+                            
                             nopdoor.SetActive(true);
                             StartCoroutine("Waitforsec");
                             
@@ -82,10 +88,13 @@ public class scriptDoor : MonoBehaviour
                                     hit.transform.GetComponent<Animator>().SetTrigger(("activate"));
                                 }
                                 
+                                
                             }
+                            doorsound.Play();
                         }
                         else
                         {
+                           
                             nopdoor.SetActive(true);
                             StartCoroutine("Waitforsec");
 
@@ -93,6 +102,7 @@ public class scriptDoor : MonoBehaviour
                         break;
                     case "key lab 1":
                         
+                        keysound1.Play();
                         Destroy(hit.transform.gameObject);
                         keyLab1Owned = true;
                         key.SetActive(true);
@@ -101,6 +111,8 @@ public class scriptDoor : MonoBehaviour
                         
                         break;
                     case "key lab 2":
+                        
+                        keysound2.Play();
                         Destroy(hit.transform.gameObject);
                         keyLab2Owned = true;
                         key.SetActive(true);
