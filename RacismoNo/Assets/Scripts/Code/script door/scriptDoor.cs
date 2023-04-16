@@ -10,9 +10,17 @@ public class scriptDoor : MonoBehaviour
     [SerializeField] public bool keyLab2Owned = false;
     [SerializeField] public float PlayerActivateDistance;
     [SerializeField] private bool active = false;
+    public GameObject key;
+    public GameObject nopdoor;
+ 
+
+    
+ 
     private void Update()
     {
+        
         RaycastHit hit;
+        
         active = Physics.Raycast(cam.position,cam.TransformDirection(Vector3.forward),out hit,PlayerActivateDistance);
         if (active)
         {
@@ -51,6 +59,13 @@ public class scriptDoor : MonoBehaviour
                                 }
                             
                             }
+                            
+                        }
+                        else
+                        {
+                            nopdoor.SetActive(true);
+                            StartCoroutine("Waitforsec");
+                            
                         }
                         break;
                     case "lab 2 door":
@@ -66,17 +81,30 @@ public class scriptDoor : MonoBehaviour
                                 {
                                     hit.transform.GetComponent<Animator>().SetTrigger(("activate"));
                                 }
-                            
+                                
                             }
+                        }
+                        else
+                        {
+                            nopdoor.SetActive(true);
+                            StartCoroutine("Waitforsec");
+
                         }
                         break;
                     case "key lab 1":
+                        
                         Destroy(hit.transform.gameObject);
                         keyLab1Owned = true;
+                        key.SetActive(true);
+                        StartCoroutine("Waitforsec");
+                        
+                        
                         break;
                     case "key lab 2":
                         Destroy(hit.transform.gameObject);
                         keyLab2Owned = true;
+                        key.SetActive(true);
+                        StartCoroutine("Waitforsec");
                         break;
                     default:
                         if (hit.transform.GetComponent<Animator>() != null)
@@ -95,6 +123,12 @@ public class scriptDoor : MonoBehaviour
                 }
             }
         }
+    }
+    IEnumerator Waitforsec()
+    {
+        yield return new WaitForSeconds(2);
+        nopdoor.SetActive(false);
+        key.SetActive(false);
     }
 }
 

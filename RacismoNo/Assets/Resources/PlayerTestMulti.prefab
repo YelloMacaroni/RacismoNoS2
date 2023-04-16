@@ -2954,11 +2954,11 @@ MonoBehaviour:
   sprintSpeed: 6
   crouchSpeed: 1.5
   gravity: 30
-  lookSpeedX: 0.816
-  lookSpeedY: 0.816
+  lookSpeedX: 1
+  lookSpeedY: 1
   upperLookLimit: 80
   lowerLookLimit: 80
-  crouchHeight: 0.7
+  crouchHeight: 0.1
   StandingHeight: 0.1
   timetoCrouch: 0.25
   crouchingCenter: {x: 0, y: 0.5, z: 0}
@@ -5970,7 +5970,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5385425056420640821}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 3.7, z: 0.28999996}
+  m_LocalPosition: {x: 0, y: 3.7, z: 0.01}
   m_LocalScale: {x: 1333, y: 1333, z: 1333}
   m_ConstrainProportionsScale: 0
   m_Children: []
