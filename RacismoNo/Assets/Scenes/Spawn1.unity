@@ -9046,7 +9046,11 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
+<<<<<<< Updated upstream
   m_Name: pb_Mesh208170
+=======
+  m_Name: pb_Mesh80852
+>>>>>>> Stashed changes
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -9608,6 +9612,7 @@ GameObject:
   - component: {fileID: 355783845}
   - component: {fileID: 355783844}
   - component: {fileID: 355783843}
+  - component: {fileID: 355783847}
   m_Layer: 0
   m_Name: Plane
   m_TagString: Footsteps/METAL
@@ -9694,6 +9699,19 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &355783847
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 355783842}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 39e70241e513542499c98225d9555b13, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sound: {fileID: 0}
 --- !u!850595691 &393227192
 LightingSettings:
   m_ObjectHideFlags: 0
@@ -9762,7 +9780,11 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
+<<<<<<< Updated upstream
   m_Name: pb_Mesh208518
+=======
+  m_Name: pb_Mesh81200
+>>>>>>> Stashed changes
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -12271,7 +12293,11 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
+<<<<<<< Updated upstream
   m_Name: pb_Mesh208310
+=======
+  m_Name: pb_Mesh80992
+>>>>>>> Stashed changes
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -13465,6 +13491,7 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+<<<<<<< Updated upstream
     - target: {fileID: 456663092110854259, guid: 5961862d894dce14689edec4dadbb744, type: 3}
       propertyPath: m_IsActive
       value: 0
@@ -13473,12 +13500,15 @@ PrefabInstance:
       propertyPath: m_LocalPosition.x
       value: 0
       objectReference: {fileID: 0}
+=======
+>>>>>>> Stashed changes
     - target: {fileID: 1464319062381614000, guid: 5961862d894dce14689edec4dadbb744, type: 3}
       propertyPath: m_LocalPosition.y
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1464319062381614000, guid: 5961862d894dce14689edec4dadbb744, type: 3}
       propertyPath: m_LocalPosition.z
+<<<<<<< Updated upstream
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2153096563865717220, guid: 5961862d894dce14689edec4dadbb744, type: 3}
@@ -13492,11 +13522,15 @@ PrefabInstance:
     - target: {fileID: 2153096563865717220, guid: 5961862d894dce14689edec4dadbb744, type: 3}
       propertyPath: m_AnchorMin.x
       value: 0
+=======
+      value: 0.11
+>>>>>>> Stashed changes
       objectReference: {fileID: 0}
     - target: {fileID: 2187360259353167336, guid: 5961862d894dce14689edec4dadbb744, type: 3}
       propertyPath: sceneViewId
       value: 1
       objectReference: {fileID: 0}
+<<<<<<< Updated upstream
     - target: {fileID: 2713160869592518827, guid: 5961862d894dce14689edec4dadbb744, type: 3}
       propertyPath: m_Color.b
       value: 1
@@ -13537,6 +13571,8 @@ PrefabInstance:
       propertyPath: m_AnchorMax.y
       value: 0
       objectReference: {fileID: 0}
+=======
+>>>>>>> Stashed changes
     - target: {fileID: 3797159965948427880, guid: 5961862d894dce14689edec4dadbb744, type: 3}
       propertyPath: m_RootOrder
       value: 1
@@ -13644,6 +13680,22 @@ PrefabInstance:
     - target: {fileID: 7993419092044032788, guid: 5961862d894dce14689edec4dadbb744, type: 3}
       propertyPath: m_AnchorMin.x
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7954177039643224510, guid: 5961862d894dce14689edec4dadbb744, type: 3}
+      propertyPath: useFootsteps
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7954177039643224510, guid: 5961862d894dce14689edec4dadbb744, type: 3}
+      propertyPath: baseStepSpeed
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 7954177039643224510, guid: 5961862d894dce14689edec4dadbb744, type: 3}
+      propertyPath: crouchStepMultipler
+      value: 1.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 7954177039643224510, guid: 5961862d894dce14689edec4dadbb744, type: 3}
+      propertyPath: sprintStepMultipler
+      value: 0.6
       objectReference: {fileID: 0}
     - target: {fileID: 8391197574963907186, guid: 5961862d894dce14689edec4dadbb744, type: 3}
       propertyPath: sceneViewId
@@ -20182,7 +20234,11 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
+<<<<<<< Updated upstream
   m_Name: pb_Mesh208136
+=======
+  m_Name: pb_Mesh80818
+>>>>>>> Stashed changes
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -20346,7 +20402,11 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
+<<<<<<< Updated upstream
   m_Name: pb_Mesh207988
+=======
+  m_Name: pb_Mesh80668
+>>>>>>> Stashed changes
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -27103,7 +27163,11 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
+<<<<<<< Updated upstream
   m_Name: pb_Mesh208378
+=======
+  m_Name: pb_Mesh81060
+>>>>>>> Stashed changes
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -27439,7 +27503,11 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
+<<<<<<< Updated upstream
   m_Name: pb_Mesh208470
+=======
+  m_Name: pb_Mesh81152
+>>>>>>> Stashed changes
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -27701,7 +27769,11 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
+<<<<<<< Updated upstream
   m_Name: pb_Mesh208554
+=======
+  m_Name: pb_Mesh81236
+>>>>>>> Stashed changes
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
