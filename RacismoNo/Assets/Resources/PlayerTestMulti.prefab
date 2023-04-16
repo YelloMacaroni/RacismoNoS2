@@ -2825,6 +2825,7 @@ GameObject:
   - component: {fileID: -8526039837793056527}
   - component: {fileID: 8454400494107509027}
   - component: {fileID: 8019860213156609221}
+  - component: {fileID: 2179483597487672166}
   m_Layer: 0
   m_Name: PlayerTestMulti
   m_TagString: Untagged
@@ -3171,6 +3172,18 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &2179483597487672166
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1464319062381613897}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5645a2f636a48e14ca0f589a29b4495a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1464319062483364711
 GameObject:
   m_ObjectHideFlags: 0
