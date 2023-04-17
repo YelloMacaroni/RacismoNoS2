@@ -81,8 +81,6 @@ public class Inventory : MonoBehaviour
 
                 FlashLight.GetComponentInChildren<Light>().enabled =
                     !FlashLight.GetComponentInChildren<Light>().enabled;
-                FlashLight2.GetComponentInChildren<Light>().enabled =
-                !FlashLight2.GetComponentInChildren<Light>().enabled;
             }
             
         }

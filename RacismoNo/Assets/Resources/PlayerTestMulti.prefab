@@ -8021,7 +8021,7 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   FlashLight: {fileID: 5426727596092303808}
-  FlashLight2: {fileID: 6635202073853527781}
+  FlashLight2: {fileID: 5426727596092303808}
   squareSlot1: {fileID: 6355649944241965208}
   squareSlot2: {fileID: 1270758579033632008}
   squareSlot3: {fileID: 6962899591070330423}
