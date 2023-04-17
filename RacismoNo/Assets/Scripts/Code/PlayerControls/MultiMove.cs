@@ -293,7 +293,7 @@ public class MultiMove : MonoBehaviourPunCallbacks
         
         characterController.height=targetHeight;
         characterController.center=targetCenter;
-        if(!Input.GetKey((KeyCode) System.Enum.Parse(typeof(KeyCode),PlayerPrefs.GetString("CrouchKey","left ctrl"))))
+        if(!Input.GetKey((KeyCode) System.Enum.Parse(typeof(KeyCode),PlayerPrefs.GetString("CrouchKey","LeftControl"))))
             isCrouching = !isCrouching;
         duringCrouchAnimation = false;
     }

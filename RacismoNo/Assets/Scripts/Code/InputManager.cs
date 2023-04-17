@@ -31,9 +31,9 @@ public class InputManager : MonoBehaviour {
 		buttonTextInteract2.SetActive(true);
 		InteractWaiting.SetActive(false);
 		waitingForKey = false;
-		buttonTextSprint.text = PlayerPrefs.GetString("SprintKey","left shift");
-		buttonTextCrouch.text = PlayerPrefs.GetString("CrouchKey","left ctrl");
-		buttonTextInteract.text = PlayerPrefs.GetString("InteractKey","e");
+		buttonTextSprint.text = PlayerPrefs.GetString("SprintKey","LeftShift");
+		buttonTextCrouch.text = PlayerPrefs.GetString("CrouchKey","LeftControl");
+		buttonTextInteract.text = PlayerPrefs.GetString("InteractKey","E");
 		
 	}
 
