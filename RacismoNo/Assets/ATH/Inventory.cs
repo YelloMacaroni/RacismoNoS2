@@ -1,7 +1,6 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
-using UnityEditor.VersionControl;
 using UnityEngine;
 using UnityEngine.UIElements;
 using Image = UnityEngine.UI.Image;
@@ -13,19 +12,20 @@ public class Inventory : MonoBehaviour
     [SerializeField] public float PlayerActivateDistance;
     public bool[] isFull = new[] { false, false, false };
     public GameObject[] slots = new GameObject[3];
-    
+    [SerializeField] public GameObject FlashLight;
     [SerializeField] public Image squareSlot1;
     [SerializeField] public Image squareSlot2;
     [SerializeField] public Image squareSlot3;
     [SerializeField] public Image Slot1;
     [SerializeField] public Image Slot2;
     [SerializeField] public Image Slot3;
-    [SerializeField] public Sprite Flashlight;
+    [SerializeField] public Sprite FlashlightSprite;
     [SerializeField] private int SelectedSlot;
     // Update is called once per frame
     private void Start()
     {
         SelectedSlot = 1;
+        FlashLight.SetActive(false);
         Slot1.enabled = false;
         Slot2.enabled = false;
         Slot3.enabled = false;
@@ -69,11 +69,37 @@ public class Inventory : MonoBehaviour
             }
             
         }
+        if (isFull[SelectedSlot-1] && slots[SelectedSlot-1].CompareTag("Flalight") )
+        {
+            
+            FlashLight.SetActive(true);
+            if (Input.GetKeyDown(KeyCode.F))
+            {
+
+                FlashLight.GetComponentInChildren<Light>().enabled =
+                    !FlashLight.GetComponentInChildren<Light>().enabled;
+            }
+            
+        }
+        else
+        {
+            if (isFull[SelectedSlot-1])
+            {
+                FlashLight.SetActive(false);
+                
+            }
+            
+        }
 
         if (Input.GetKeyDown(KeyCode.R) && isFull[SelectedSlot - 1])
         {
             slots[SelectedSlot - 1].transform.position = cam.transform.position + cam.transform.forward * 1;
             slots[SelectedSlot - 1].SetActive(true);
+            if (slots[SelectedSlot-1].CompareTag("Flalight"))
+            {
+                FlashLight.SetActive(false);
+            }
+            
             slots[SelectedSlot - 1] = null;
             isFull[SelectedSlot - 1] = false;
             switch (SelectedSlot)
@@ -116,7 +142,7 @@ public class Inventory : MonoBehaviour
                             {
                                 case 0:
                                     Slot1.enabled = true;
-                                    Slot1.sprite = Flashlight;
+                                    Slot1.sprite = FlashlightSprite;
                                     SelectedSlot = 1;
                                     squareSlot1.enabled = true;
                                     squareSlot2.enabled = false;
@@ -124,7 +150,7 @@ public class Inventory : MonoBehaviour
                                     break;
                                 case 1:
                                     Slot2.enabled = true;
-                                    Slot2.sprite = Flashlight;
+                                    Slot2.sprite = FlashlightSprite;
                                     SelectedSlot = 2;
                                     squareSlot1.enabled = false;
                                     squareSlot2.enabled = true;
@@ -132,15 +158,16 @@ public class Inventory : MonoBehaviour
                                     break;
                                 case 2:
                                     Slot3.enabled = true;
-                                    Slot3.sprite = Flashlight;
+                                    Slot3.sprite = FlashlightSprite;
                                     SelectedSlot = 3;
                                     squareSlot1.enabled = false;
                                     squareSlot2.enabled = false;
                                     squareSlot3.enabled = true;
                                     break;
                             }
-                            hit.transform.gameObject.SetActive(false);
-                            
+                            slots[i].SetActive(false);
+
+
                         }
                         break;
                 }
