@@ -26,11 +26,12 @@ public class scriptDoor : MonoBehaviour
     {
         if ((SceneManager.GetActiveScene()).name == "Floor -1")
             PrincipalQuest.text = "Leave the basement";
+        if ((SceneManager.GetActiveScene()).name == "Spawn1")
+            PrincipalQuest.text = "Enter the building";
     }
  
     private void Update()
     {
-        
         RaycastHit hit;
         
         active = Physics.Raycast(cam.position,cam.TransformDirection(Vector3.forward),out hit,PlayerActivateDistance);

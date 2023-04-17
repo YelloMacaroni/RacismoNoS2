@@ -13,6 +13,7 @@ public class Inventory : MonoBehaviour
     public bool[] isFull = new[] { false, false, false };
     public GameObject[] slots = new GameObject[3];
     [SerializeField] public GameObject FlashLight;
+    [SerializeField] public GameObject FlashLight2;
     [SerializeField] public Image squareSlot1;
     [SerializeField] public Image squareSlot2;
     [SerializeField] public Image squareSlot3;
@@ -26,6 +27,7 @@ public class Inventory : MonoBehaviour
     {
         SelectedSlot = 1;
         FlashLight.SetActive(false);
+        FlashLight2.SetActive(false);
         Slot1.enabled = false;
         Slot2.enabled = false;
         Slot3.enabled = false;
@@ -73,11 +75,14 @@ public class Inventory : MonoBehaviour
         {
             
             FlashLight.SetActive(true);
+            FlashLight2.SetActive(true);
             if (Input.GetKeyDown(KeyCode.F))
             {
 
                 FlashLight.GetComponentInChildren<Light>().enabled =
                     !FlashLight.GetComponentInChildren<Light>().enabled;
+                FlashLight2.GetComponentInChildren<Light>().enabled =
+                !FlashLight2.GetComponentInChildren<Light>().enabled;
             }
             
         }
@@ -86,6 +91,7 @@ public class Inventory : MonoBehaviour
             if (isFull[SelectedSlot-1])
             {
                 FlashLight.SetActive(false);
+                FlashLight2.SetActive(false);
                 
             }
             
@@ -98,6 +104,7 @@ public class Inventory : MonoBehaviour
             if (slots[SelectedSlot-1].CompareTag("Flalight"))
             {
                 FlashLight.SetActive(false);
+                FlashLight2.SetActive(false);
             }
             
             slots[SelectedSlot - 1] = null;
