@@ -16,7 +16,6 @@ public class scriptDoor : MonoBehaviour
         active = Physics.Raycast(cam.position,cam.TransformDirection(Vector3.forward),out hit,PlayerActivateDistance);
         if (active)
         {
-            print(active);
             if (Input.GetKeyDown(KeyCode.E))
             {
                 print(hit.transform.tag);
