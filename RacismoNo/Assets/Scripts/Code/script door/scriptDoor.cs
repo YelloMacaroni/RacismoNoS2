@@ -2,6 +2,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using Photon.Pun;
+using TMPro;
+using UnityEngine.SceneManagement;
 
 public class scriptDoor : MonoBehaviour
 {
@@ -14,9 +16,17 @@ public class scriptDoor : MonoBehaviour
     public GameObject nopdoor;
     public AudioSource keysound;
     public AudioSource door;
- 
-
+    public TMP_Text PrincipalQuest;
+    public TMP_Text SecondaryQuest;
+    bool quest1 = false;
+    bool quest2 = false;
     
+
+    public void Start()
+    {
+        if ((SceneManager.GetActiveScene()).name == "Floor -1")
+            PrincipalQuest.text = "Leave the basement";
+    }
  
     private void Update()
     {
@@ -26,7 +36,6 @@ public class scriptDoor : MonoBehaviour
         active = Physics.Raycast(cam.position,cam.TransformDirection(Vector3.forward),out hit,PlayerActivateDistance);
         if (active)
         {
-            print(active);
             if (Input.GetKeyDown((KeyCode) System.Enum.Parse(typeof(KeyCode),PlayerPrefs.GetString("InteractKey","E"))))
             {
                 print(hit.transform.tag); 
@@ -66,6 +75,13 @@ public class scriptDoor : MonoBehaviour
                         }
                         else
                         {
+                            if (quest2)
+                                SecondaryQuest.text = "Find the right keys";
+                            else
+                            {
+                                SecondaryQuest.text = "Find the right key";
+                            }
+                            quest1 = true;
                             nopdoor.SetActive(true);
                             StartCoroutine("Waitforsec");
                             
@@ -90,13 +106,28 @@ public class scriptDoor : MonoBehaviour
                         }
                         else
                         {
+                            if (quest1)
+                                SecondaryQuest.text = "Find the right keys";
+                            else
+                            {
+                                SecondaryQuest.text = "Find the right key";
+                            }
+                            quest2 = true;
                             nopdoor.SetActive(true);
                             StartCoroutine("Waitforsec");
 
                         }
                         break;
                     case "key lab 1":
-                        
+                        if (quest1)
+                            {if (quest2)
+                                {SecondaryQuest.text = "Find the other key";
+                                quest1 = false;}
+                            else
+                            {
+                                SecondaryQuest.text = "";
+                                quest1 = false;
+                            }}
                         keysound.Play();
                         Destroy(hit.transform.gameObject);
                         keyLab1Owned = true;
@@ -106,7 +137,15 @@ public class scriptDoor : MonoBehaviour
                         
                         break;
                     case "key lab 2":
-                        
+                        if (quest2)
+                            {if (quest1)
+                                {SecondaryQuest.text = "Find the other key";
+                                quest2 = false;}
+                            else
+                            {
+                                SecondaryQuest.text = "";
+                                quest2 = false;
+                            }}
                         keysound.Play();
                         Destroy(hit.transform.gameObject);
                         keyLab2Owned = true;
@@ -114,18 +153,19 @@ public class scriptDoor : MonoBehaviour
                         StartCoroutine("Waitforsec");
                         break;
                     default:
-                        if (hit.transform.GetComponent<Animator>() != null)
-                        {
-                            if (hit.transform.GetComponent<Animator>().GetBool("activate"))
+                        if (!(hit.transform.tag == "Flalight"))
+                            if (hit.transform.GetComponent<Animator>() != null)
                             {
-                                hit.transform.GetComponent<Animator>().ResetTrigger(("activate"));
+                                if (hit.transform.GetComponent<Animator>().GetBool("activate"))
+                                {
+                                    hit.transform.GetComponent<Animator>().ResetTrigger(("activate"));
+                                }
+                                else
+                                {
+                                    hit.transform.GetComponent<Animator>().SetTrigger(("activate"));
+                                }
+                                
                             }
-                            else
-                            {
-                                hit.transform.GetComponent<Animator>().SetTrigger(("activate"));
-                            }
-                            
-                        }
                         break;
                 }
             }

@@ -95,7 +95,7 @@ public class Inventory : MonoBehaviour
         if (active)
         {
 
-            if (Input.GetKeyDown(KeyCode.E))
+            if (Input.GetKeyDown((KeyCode) System.Enum.Parse(typeof(KeyCode),PlayerPrefs.GetString("InteractKey","E"))))
             {
                 print(hit.transform.tag);
                 

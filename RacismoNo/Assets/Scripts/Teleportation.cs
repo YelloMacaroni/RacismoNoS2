@@ -1,5 +1,6 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using TMPro;
 
 public class Teleportation : MonoBehaviour
 {
@@ -7,11 +8,10 @@ public class Teleportation : MonoBehaviour
 
     public void Allerauniveau()
     {
-
-         SceneManager.LoadScene(sceneName);
+        SceneManager.LoadScene(sceneName);
     }
     private void OnTriggerEnter(Collider other)
     {
-           Allerauniveau(); 
+        Allerauniveau(); 
     }
 }

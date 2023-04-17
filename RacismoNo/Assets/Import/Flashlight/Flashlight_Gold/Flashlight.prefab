@@ -12,7 +12,6 @@ GameObject:
   - component: {fileID: 33012785063044670}
   - component: {fileID: 23035564008676742}
   - component: {fileID: 95363276851437522}
-  - component: {fileID: 710325654360273789}
   m_Layer: 0
   m_Name: Flashlight
   m_TagString: Untagged
@@ -109,42 +108,6 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
---- !u!114 &710325654360273789
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1002705123656268}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2ccd9f3791714b142bf9df70f4c8ea3e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  canSprint: 1
-  canCrouch: 1
-  canUseHeadBob: 1
-  sprintKey: 304
-  crouchKey: 306
-  walkSpeed: 3
-  sprintSpeed: 6
-  crouchSpeed: 1.5
-  gravity: 30
-  lookSpeedX: 2
-  lookSpeedY: 2
-  upperLookLimit: 80
-  lowerLookLimit: 80
-  crouchHeight: 0.5
-  StandingHeight: 2
-  timetoCrouch: 0.25
-  crouchingCenter: {x: 0, y: 0.5, z: 0}
-  standingCenter: {x: 0, y: 0, z: 0}
-  walkBobSpeed: 14
-  walkBobAmount: 0.05
-  sprintBobSpeed: 18
-  sprintBobAmount: 0.11
-  crouchBobSpeed: 8
-  crouchBobAmount: 0.025
 --- !u!1 &1175331865632600
 GameObject:
   m_ObjectHideFlags: 0
