@@ -3,13 +3,13 @@ using System.Collections.Generic;
 using UnityEngine;
 using Photon.Pun;
 using UnityEngine.UI;
-
+//BONJOUR 
 public class MultiMove : MonoBehaviourPunCallbacks
 {
     Animator animator;
     public bool CanMove { get; private set;}=true;  
-    private bool isSprinting => canSprint && Input.GetKey(sprintKey);
-    private bool shouldCrouch => canCrouch && Input.GetKey(crouchKey) && !duringCrouchAnimation && characterController.isGrounded;
+    private bool isSprinting => canSprint && Input.GetKey((KeyCode) System.Enum.Parse(typeof(KeyCode),PlayerPrefs.GetString("SprintKey","LeftShift")));
+    private bool shouldCrouch => canCrouch && Input.GetKey((KeyCode) System.Enum.Parse(typeof(KeyCode),PlayerPrefs.GetString("CrouchKey","LeftControl"))) && !duringCrouchAnimation && characterController.isGrounded;
     
     
     [Header("Functional Options")]
@@ -18,9 +18,6 @@ public class MultiMove : MonoBehaviourPunCallbacks
     [SerializeField]private bool canUseHeadBob=true;
     [SerializeField]private bool useFootsteps =true;
 
-    [Header("Controls")]
-    [SerializeField]private KeyCode sprintKey=KeyCode.LeftShift;
-    [SerializeField]private KeyCode crouchKey=KeyCode.LeftControl;
 
 
     [Header("Animations")]
@@ -178,7 +175,7 @@ public class MultiMove : MonoBehaviourPunCallbacks
         bool backwardPressed=(Input.GetKey("s"));
         bool rightPressed=(Input.GetKey("d"));
         bool leftPressed=(Input.GetKey("a"));
-        bool runPressed=Input.GetKey("left shift");
+        bool runPressed=Input.GetKey((KeyCode) System.Enum.Parse(typeof(KeyCode),PlayerPrefs.GetString("SprintKey","LeftShift")));
        
         
         
@@ -296,7 +293,7 @@ public class MultiMove : MonoBehaviourPunCallbacks
         
         characterController.height=targetHeight;
         characterController.center=targetCenter;
-        if(!Input.GetKey(crouchKey))
+        if(!Input.GetKey((KeyCode) System.Enum.Parse(typeof(KeyCode),PlayerPrefs.GetString("CrouchKey","LeftControl"))))
             isCrouching = !isCrouching;
         duringCrouchAnimation = false;
     }
