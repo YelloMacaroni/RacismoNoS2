@@ -15,14 +15,8 @@ namespace Méchant
         }
 
         // Update is called once per frame
-        void Update()
-        {
-            agent.destination = 
-        }
+        
 
-        bool Randompoint(Vector3 center, float range, out Vector3 result)
-        {
-            Vector3 randomPoint
-        }
+        
     }
 }
