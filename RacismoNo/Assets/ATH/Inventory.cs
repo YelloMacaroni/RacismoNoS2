@@ -22,6 +22,8 @@ public class Inventory : MonoBehaviour
     [SerializeField] public Image Slot3;
     [SerializeField] public Sprite FlashlightSprite;
     [SerializeField] private int SelectedSlot;
+    public GameObject lampe;
+    public AudioSource lampesound;
     // Update is called once per frame
     private void Start()
     {
@@ -78,7 +80,7 @@ public class Inventory : MonoBehaviour
             FlashLight2.SetActive(true);
             if (Input.GetKeyDown(KeyCode.F))
             {
-
+                lampesound.Play();
                 FlashLight.GetComponentInChildren<Light>().enabled =
                     !FlashLight.GetComponentInChildren<Light>().enabled;
             }
@@ -174,12 +176,19 @@ public class Inventory : MonoBehaviour
 
 
                         }
+                        lampe.SetActive(true);
+                        StartCoroutine("Waitforsec");
                         break;
                 }
             }
         }
         
         
+    }
+    IEnumerator Waitforsec()
+    {
+        yield return new WaitForSeconds(2);
+        lampe.SetActive(false);   
     }
     
     
