@@ -168,17 +168,13 @@ public class scriptDoor : MonoBehaviour
                         }
                         else
                         {
-                            if (quest2)
-                                SecondaryQuest.text = "Find the card";
-                            else
-                            {
-                                SecondaryQuest.text = "Find the card";
-                            }
-                            quest1 = true;
-                            nopdoor.SetActive(true);
-                            StartCoroutine("Waitforsec");
                             
+                            SecondaryQuest.text = "Find the card";
                         }
+                        quest1 = true;
+                        nopdoor.SetActive(true);
+                        StartCoroutine("Waitforsec");
+                        
                         break;
                     default:
                         if (!(hit.transform.tag == "Flalight"))
