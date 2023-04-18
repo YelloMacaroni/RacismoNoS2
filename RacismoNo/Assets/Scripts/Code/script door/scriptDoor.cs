@@ -173,7 +173,9 @@ public class scriptDoor : MonoBehaviour
                     case "elevator -1": 
                         if (keyelevatormoinsun)
                         {
-                            elevatorsound.Play();        
+                            elevatorsound.Play();     
+                            StartCoroutine("Waitforsec");
+                              
                             SceneManager.LoadScene(sceneName);         
                         }
                         else
