@@ -279,9 +279,9 @@ public class MultiMove : MonoBehaviourPunCallbacks
         
         float timeElapsed=0;
         float targetHeight= isCrouching ? StandingHeight : crouchHeight;
-        float currentHeight= characterController.height;
+        float currentHeight= characterController.height ;
         Vector3 targetCenter = isCrouching ? standingCenter : crouchingCenter;
-        Vector3 currentCenter = characterController.center;
+        Vector3 currentCenter = characterController.center ;
         
         while(timeElapsed<timetoCrouch)
         {
