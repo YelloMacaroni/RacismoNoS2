@@ -14,6 +14,8 @@ TagManager:
   - key lab 1
   - Flalight
   - tp
+  - key elevator -1
+  - elevator -1
   layers:
   - Default
   - TransparentFX
