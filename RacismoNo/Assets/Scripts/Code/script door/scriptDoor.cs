@@ -10,6 +10,7 @@ public class scriptDoor : MonoBehaviour
     [SerializeField] public Transform cam;
     [SerializeField] public bool keyLab1Owned = false;
     [SerializeField] public bool keyLab2Owned = false;
+    [SerializeField] public bool keyelevatormoinsun = false;
     [SerializeField] public float PlayerActivateDistance;
     [SerializeField] private bool active = false;
     public GameObject key;
@@ -152,6 +153,32 @@ public class scriptDoor : MonoBehaviour
                         keyLab2Owned = true;
                         key.SetActive(true);
                         StartCoroutine("Waitforsec");
+                        break;
+                    case "key elevator -1":
+                        keysound.Play();
+                        Destroy(hit.transform.gameObject);
+                        keyelevatormoinsun = true;
+                        key.SetActive(true);
+                        StartCoroutine("Waitforsec");
+                        break;
+                    case "elevator -1": 
+                        if (keyelevatormoinsun)
+                        {
+                            /// tp
+                        }
+                        else
+                        {
+                            if (quest2)
+                                SecondaryQuest.text = "Find the card";
+                            else
+                            {
+                                SecondaryQuest.text = "Find the card";
+                            }
+                            quest1 = true;
+                            nopdoor.SetActive(true);
+                            StartCoroutine("Waitforsec");
+                            
+                        }
                         break;
                     default:
                         if (!(hit.transform.tag == "Flalight"))
