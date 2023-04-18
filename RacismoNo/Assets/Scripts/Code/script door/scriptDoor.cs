@@ -5,6 +5,7 @@ using Photon.Pun;
 using TMPro;
 using UnityEngine.SceneManagement;
 
+
 public class scriptDoor : MonoBehaviour
 {
     [SerializeField] public Transform cam;
@@ -13,14 +14,21 @@ public class scriptDoor : MonoBehaviour
     [SerializeField] public bool keyelevatormoinsun = false;
     [SerializeField] public float PlayerActivateDistance;
     [SerializeField] private bool active = false;
+    [SerializeField] public bool canacessrdc=false;
     public GameObject key;
     public GameObject nopdoor;
+    public GameObject card;
+    public GameObject elevator;
     public AudioSource keysound;
     public AudioSource door;
+    public AudioSource cardsound;
+    public AudioSource elevatorsound;
     public TMP_Text PrincipalQuest;
     public TMP_Text SecondaryQuest;
     bool quest1 = false;
     bool quest2 = false;
+    
+    public string sceneName; 
     
 
     public void Start()
@@ -148,6 +156,7 @@ public class scriptDoor : MonoBehaviour
                                 SecondaryQuest.text = "";
                                 quest2 = false;
                             }}
+                        
                         keysound.Play();
                         Destroy(hit.transform.gameObject);
                         keyLab2Owned = true;
@@ -155,26 +164,26 @@ public class scriptDoor : MonoBehaviour
                         StartCoroutine("Waitforsec");
                         break;
                     case "key elevator -1":
-                        keysound.Play();
+                        cardsound.Play();
                         Destroy(hit.transform.gameObject);
                         keyelevatormoinsun = true;
-                        key.SetActive(true);
+                        card.SetActive(true);
                         StartCoroutine("Waitforsec");
                         break;
                     case "elevator -1": 
                         if (keyelevatormoinsun)
                         {
-                            /// tp
+                            elevatorsound.Play();        
+                            SceneManager.LoadScene(sceneName);         
                         }
                         else
                         {
-                            
                             SecondaryQuest.text = "Find the card";
+                            elevator.SetActive(true);
+                            StartCoroutine("Waitforsec");
                         }
                         quest1 = true;
-                        nopdoor.SetActive(true);
-                        StartCoroutine("Waitforsec");
-                        
+                       
                         break;
                     default:
                         if (!(hit.transform.tag == "Flalight"))
@@ -200,6 +209,8 @@ public class scriptDoor : MonoBehaviour
         yield return new WaitForSeconds(2);
         nopdoor.SetActive(false);
         key.SetActive(false);
+        card.SetActive(false);
+        elevator.SetActive(false);
     }
    
 }

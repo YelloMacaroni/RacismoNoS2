@@ -10,7 +10,7 @@ public class Teleportation : MonoBehaviour
     {
         SceneManager.LoadScene(sceneName);
     }
-    private void OnTriggerEnter(Collider other)
+    public void OnTriggerEnter(Collider other)
     {
         Allerauniveau(); 
     }
