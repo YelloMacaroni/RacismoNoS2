@@ -10,7 +10,7 @@ public class SpawnPlayers : MonoBehaviour
 
     public void Start()
     {
-        Vector3 Position = new Vector3(0, 2, 0);  
+        Vector3 Position = new Vector3(11.86f, 0, -7);  
         if (PhotonNetwork.IsConnected)      
             {
                 Destroy(playersolo);
