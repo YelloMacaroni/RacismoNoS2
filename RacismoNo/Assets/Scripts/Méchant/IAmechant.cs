@@ -34,10 +34,11 @@ public class IAmechant : MonoBehaviour //don't forget to change the script name 
             }
         }
 
-        if (SetAgro())
+         if (SetAgro())
         {
-            
+
         }
+        
 
     }
     bool RandomPoint(Vector3 center, float range, out Vector3 result)

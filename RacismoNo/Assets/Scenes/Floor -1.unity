@@ -20,12 +20,12 @@ RenderSettings:
   m_FogDensity: 0.01
   m_LinearFogStart: 0
   m_LinearFogEnd: 300
-  m_AmbientSkyColor: {r: 0.1509434, g: 0.1509434, b: 0.1509434, a: 1}
+  m_AmbientSkyColor: {r: 0.028301895, g: 0.028301895, b: 0.028301895, a: 1}
   m_AmbientEquatorColor: {r: 0.114, g: 0.125, b: 0.133, a: 1}
   m_AmbientGroundColor: {r: 0.047, g: 0.043, b: 0.035, a: 1}
   m_AmbientIntensity: 1
   m_AmbientMode: 3
-  m_SubtractiveShadowColor: {r: 0.42, g: 0.478, b: 0.627, a: 1}
+  m_SubtractiveShadowColor: {r: 0.09433961, g: 0.09433961, b: 0.09433961, a: 1}
   m_SkyboxMaterial: {fileID: 10304, guid: 0000000000000000f000000000000000, type: 0}
   m_HaloStrength: 0.5
   m_FlareStrength: 1
@@ -18509,7 +18509,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh24672
+  m_Name: pb_Mesh78600
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -19819,7 +19819,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh24686
+  m_Name: pb_Mesh78614
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -21141,7 +21141,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh24882
+  m_Name: pb_Mesh78810
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -23335,7 +23335,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh24954
+  m_Name: pb_Mesh78882
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -25108,7 +25108,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh24824
+  m_Name: pb_Mesh78752
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -25351,7 +25351,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh25050
+  m_Name: pb_Mesh78978
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -26666,7 +26666,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5503719231565513744, guid: 5961862d894dce14689edec4dadbb744, type: 3}
       propertyPath: keyelevatormoinsun
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6635202073853527781, guid: 5961862d894dce14689edec4dadbb744, type: 3}
       propertyPath: m_IsActive
