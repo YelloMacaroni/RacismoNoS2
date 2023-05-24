@@ -11,7 +11,9 @@ public class invisiblebody : MonoBehaviourPunCallbacks
     void Start()
     {
         ren=GetComponent<Renderer>();
-        if (photonView.IsMine)
+        if (!PhotonNetwork.IsConnected)
+            ren.enabled=false;
+        else if (photonView.IsMine)
             ren.enabled=false;
     }
 
