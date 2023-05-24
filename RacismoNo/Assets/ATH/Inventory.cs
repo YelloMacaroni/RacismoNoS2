@@ -3,9 +3,10 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UIElements;
+using Photon.Pun;
 using Image = UnityEngine.UI.Image;
 
-public class Inventory : MonoBehaviour
+public class Inventory : MonoBehaviourPunCallbacks
 {
     [SerializeField] public Transform cam;
     [SerializeField] private bool active = false;
@@ -27,6 +28,7 @@ public class Inventory : MonoBehaviour
     // Update is called once per frame
     private void Start()
     {
+        
         SelectedSlot = 1;
         FlashLight.SetActive(false);
         FlashLight2.SetActive(false);

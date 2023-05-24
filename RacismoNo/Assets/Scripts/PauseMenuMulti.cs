@@ -34,7 +34,7 @@ public class PauseMenuMulti : MonoBehaviourPunCallbacks
 
     public void PauseGame()
     {
-        if (photonView.IsMine)
+        if (!PhotonNetwork.IsConnected || photonView.IsMine)
         {pauseMenu.SetActive(true);
         isPaused = true;
         Cursor.lockState = CursorLockMode.Confined;
@@ -49,7 +49,7 @@ public class PauseMenuMulti : MonoBehaviourPunCallbacks
 
     public void SettingsOpen()
     {
-        if (photonView.IsMine)
+        if (!PhotonNetwork.IsConnected || photonView.IsMine)
         {isInSettings = true;
         SettingsMenu.SetActive(true);
         pauseMenu.SetActive(false);
@@ -62,7 +62,7 @@ public class PauseMenuMulti : MonoBehaviourPunCallbacks
     
     public void ResumeGame()
     {
-        if (photonView.IsMine)
+        if (!PhotonNetwork.IsConnected || photonView.IsMine)
         {Cursor.visible = false;
         Cursor.lockState = CursorLockMode.Locked;
         pauseMenu.SetActive(false);
@@ -82,18 +82,17 @@ public class PauseMenuMulti : MonoBehaviourPunCallbacks
             {SettingsMenu.SetActive(false);
             isInSettings = false;}
         if (PhotonNetwork.IsConnected)
-            PhotonNetwork.Disconnect();
+            {
+                Debug.Log("début déconnexion");
+                PhotonNetwork.Disconnect();
+                SceneManager.LoadScene("Lancement");
+                
+            }
         else
-            Time.timeScale = 1f;
-            SceneManager.LoadScene("Lancement");
-        
+            {Time.timeScale = 1f;
+            SceneManager.LoadScene("Lancement");}
     }
 
-    public override void OnDisconnected(DisconnectCause cause)
-    {
-        SceneManager.LoadScene("Lancement");
-    }
-    
     public void Quitter()
     {
         isPaused = false;

@@ -16,6 +16,7 @@ TagManager:
   - tp
   - key elevator -1
   - elevator -1
+  - cat
   layers:
   - Default
   - TransparentFX
