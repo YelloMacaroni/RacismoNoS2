@@ -3690,10 +3690,10 @@ CharacterController:
   m_Height: 2
   m_Radius: 0.5
   m_SlopeLimit: 45
-  m_StepOffset: 0.5
+  m_StepOffset: 0.3
   m_SkinWidth: 0.08
   m_MinMoveDistance: 0.001
-  m_Center: {x: 0, y: 1, z: 0}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!114 &7954177039643224510
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3723,16 +3723,16 @@ MonoBehaviour:
   isCrouchingHashBack: 0
   isCrouchingHashRight: 0
   isCrouchingHashLeft: 0
-  walkSpeed: 3
-  sprintSpeed: 6
+  walkSpeed: 6
+  sprintSpeed: 9
   crouchSpeed: 1.5
   gravity: 30
   lookSpeedX: 1
   lookSpeedY: 1
   upperLookLimit: 80
   lowerLookLimit: 80
-  crouchHeight: 0.1
-  StandingHeight: 0.1
+  crouchHeight: 0.5
+  StandingHeight: 2
   timetoCrouch: 0.25
   crouchingCenter: {x: 0, y: 0.5, z: 0}
   standingCenter: {x: 0, y: 0, z: 0}
@@ -3867,7 +3867,7 @@ AudioSource:
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0
-  Priority: 128
+  Priority: 124
   DopplerLevel: 1
   MinDistance: 1
   MaxDistance: 500
