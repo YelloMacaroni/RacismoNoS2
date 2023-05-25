@@ -2,21 +2,44 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using Photon.Pun;
+using UnityEngine.SceneManagement;
 
-public class SpawnPlayers : MonoBehaviour
+
+public class SpawnPlayers : MonoBehaviourPunCallbacks
 {
     public GameObject playerPrefab;
-    public GameObject playersolo;
+    //public GameObject cat;
+    
 
     public void Start()
     {
         Vector3 Position = new Vector3(11.86f, 0, -7);  
+       //Vector3 Position2 = new Vector3(-23f, 0, 0); 
         if (PhotonNetwork.IsConnected)      
+        {
+            Debug.Log("connecté");
+            GameObject player = PhotonNetwork.Instantiate(playerPrefab.name, Position, Quaternion.identity);
+            if ((SceneManager.GetActiveScene()).name == "Floor -1")
+            {   
+                //var a = GameObject.FindGameObjectsWithTag("cat");
+                //if(PhotonNetwork.IsMasterClient)
+                //    PhotonNetwork.Instantiate(cat.name, Position2, Quaternion.identity);
+                player.transform.localScale = new Vector3(1.2f,1.2f,1.2f);}
+            else
             {
-                Destroy(playersolo);
-                PhotonNetwork.Instantiate(playerPrefab.name, Position, Quaternion.identity);
+                player.transform.localScale = new Vector3(0.7f,0.7f,0.7f);
             }
-        
+        }
+        else
+        {
+            GameObject player = Instantiate(playerPrefab, Position, Quaternion.identity); 
+            if ((SceneManager.GetActiveScene()).name == "Floor -1")
+                {player.transform.localScale = new Vector3(1.2f,1.2f,1.2f);}
+            else
+            {
+                player.transform.localScale = new Vector3(0.7f,0.7f,0.7f);
+            }
+        }
     }
     
 }

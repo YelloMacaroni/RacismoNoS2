@@ -114,7 +114,7 @@ public class MultiMove : MonoBehaviourPunCallbacks
         defaultYPos = playerCamera.transform.localPosition.y;
         Cursor.lockState = CursorLockMode.Locked;
         Cursor.visible = false;
-        if (!photonView.IsMine)
+        if (PhotonNetwork.IsConnected && !photonView.IsMine)
         {
             Destroy(playerCameraToDestroy);
         }
@@ -123,7 +123,7 @@ public class MultiMove : MonoBehaviourPunCallbacks
 
     void Update()
     {
-        if (photonView.IsMine)
+        if (photonView.IsMine || !PhotonNetwork.IsConnected)
         {
             if (Cursor.visible == false)
             {
@@ -348,7 +348,7 @@ public class MultiMove : MonoBehaviourPunCallbacks
     }
     
     
-    
+   
     
 
 }
