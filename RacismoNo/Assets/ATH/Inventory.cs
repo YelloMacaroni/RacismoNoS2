@@ -25,6 +25,9 @@ public class Inventory : MonoBehaviourPunCallbacks
     [SerializeField] private int SelectedSlot;
     public GameObject lampe;
     public AudioSource lampesound;
+
+    
+
     // Update is called once per frame
     private void Start()
     {
@@ -86,7 +89,6 @@ public class Inventory : MonoBehaviourPunCallbacks
                 FlashLight.GetComponentInChildren<Light>().enabled =
                     !FlashLight.GetComponentInChildren<Light>().enabled;
             }
-            
         }
         else
         {
