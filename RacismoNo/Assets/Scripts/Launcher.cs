@@ -69,6 +69,8 @@ public class Launcher : MonoBehaviourPunCallbacks
     }
     public void StartGame()
     {
+        var room = PhotonNetwork.CurrentRoom;
+        room.IsVisible = false;
         PhotonNetwork.LoadLevel("Spawn1");
     }
     public override void OnJoinedRoom()
