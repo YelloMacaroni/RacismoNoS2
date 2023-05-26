@@ -3687,7 +3687,7 @@ CharacterController:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Height: 2
+  m_Height: 1
   m_Radius: 0.5
   m_SlopeLimit: 45
   m_StepOffset: 0.3
@@ -3732,7 +3732,7 @@ MonoBehaviour:
   upperLookLimit: 80
   lowerLookLimit: 80
   crouchHeight: 0.5
-  StandingHeight: 2
+  StandingHeight: 1
   timetoCrouch: 0.25
   crouchingCenter: {x: 0, y: 0.5, z: 0}
   standingCenter: {x: 0, y: 0, z: 0}
