@@ -3807,7 +3807,7 @@ MonoBehaviour:
   lookSpeedY: 1
   upperLookLimit: 80
   lowerLookLimit: 80
-  crouchHeight: 0
+  crouchHeight: 3
   StandingHeight: 2
   timetoCrouch: 0.25
   crouchingCenter: {x: 0, y: 1.5, z: 0}
@@ -3831,6 +3831,7 @@ MonoBehaviour:
   metalClips:
   - {fileID: 8300000, guid: b25225c72201cd740b16b95b86d57940, type: 3}
   - {fileID: 8300000, guid: 5e265270fb85126479eef52d8fce3b08, type: 3}
+  isCrouching: 0
   playerCamera: {fileID: 7462474350895609141}
   playerCameraToDestroy: {fileID: 5385425056420640821}
   slider: {fileID: 7334134817216754847}
