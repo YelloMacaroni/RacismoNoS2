@@ -92,6 +92,7 @@ public class MultiMove : MonoBehaviourPunCallbacks
 
     private void Start()
     {
+        Debug.Log(RenderSettings.ambientLight);
         animator=GetComponent<Animator>();
         isWalkingHash=Animator.StringToHash("canWalk");
         isWalkingHashBack=Animator.StringToHash("canWalkback");
@@ -116,7 +117,9 @@ public class MultiMove : MonoBehaviourPunCallbacks
         Cursor.visible = false;
         if (PhotonNetwork.IsConnected && !photonView.IsMine)
         {
-            Destroy(playerCameraToDestroy);
+            Destroy(playerCameraToDestroy.GetComponentInChildren<Camera>());
+            Destroy(playerCameraToDestroy.GetComponentInChildren<scriptDoor>());
+            Destroy(playerCameraToDestroy.GetComponentInChildren<AudioListener>());
         }
     }
 
