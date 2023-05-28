@@ -810,7 +810,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -183, y: -463}
+  m_AnchoredPosition: {x: -29, y: -463}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &2004138011709625159
@@ -3824,8 +3824,8 @@ MonoBehaviour:
   sprintStepMultipler: 0.6
   footstepAudioSource: {fileID: 8019860213156609221}
   woodClips:
-  - {fileID: 8300000, guid: 505a015d5525e0442ae4a62d5bac304d, type: 3}
-  - {fileID: 8300000, guid: 8e001351cd7065543a068386cde4c960, type: 3}
+  - {fileID: 8300000, guid: 970f2bc91def23c42a2f1d909c4f96fb, type: 3}
+  - {fileID: 8300000, guid: 970f2bc91def23c42a2f1d909c4f96fb, type: 3}
   grassClips:
   - {fileID: 8300000, guid: 970f2bc91def23c42a2f1d909c4f96fb, type: 3}
   - {fileID: 8300000, guid: 970f2bc91def23c42a2f1d909c4f96fb, type: 3}
@@ -3939,7 +3939,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 24300002, guid: ba0296294328eb34f8499ac22c9998dd, type: 2}
   m_audioClip: {fileID: 0}
   m_PlayOnAwake: 1
-  m_Volume: 0.81
+  m_Volume: 0.58
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -7232,7 +7232,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 24300002, guid: ba0296294328eb34f8499ac22c9998dd, type: 2}
   m_audioClip: {fileID: 8300000, guid: e694f556d73575c4fb604cbee188872c, type: 3}
   m_PlayOnAwake: 0
-  m_Volume: 1
+  m_Volume: 0.32
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -8045,7 +8045,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -183, y: -463}
+  m_AnchoredPosition: {x: -29, y: -463}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &1528050569385517762
@@ -8183,7 +8183,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -183, y: -463}
+  m_AnchoredPosition: {x: -29, y: -463}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &3349163823745246185
@@ -8612,7 +8612,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 24300002, guid: ba0296294328eb34f8499ac22c9998dd, type: 2}
   m_audioClip: {fileID: 8300000, guid: 699bccb2fab11ac4ebe23bcefeb36bfc, type: 3}
   m_PlayOnAwake: 0
-  m_Volume: 0.509
+  m_Volume: 0.22
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -9113,7 +9113,7 @@ MonoBehaviour:
   elevatorsound: {fileID: 417659778937340201}
   PrincipalQuest: {fileID: 4699867174759193557}
   SecondaryQuest: {fileID: 895600076936458940}
-  sceneName: Floor rdc
+  sceneName: Floor RDC
   PV: {fileID: 2187360259353167336}
 --- !u!1 &5389955783861448750
 GameObject:
@@ -9150,7 +9150,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -183, y: -463}
+  m_AnchoredPosition: {x: -29, y: -463}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &6228475923618904569
@@ -10943,7 +10943,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -183, y: -463}
+  m_AnchoredPosition: {x: -29, y: -463}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &5822701732479586036
@@ -11955,7 +11955,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -183, y: -463}
+  m_AnchoredPosition: {x: -29, y: -463}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &5868476546888833798

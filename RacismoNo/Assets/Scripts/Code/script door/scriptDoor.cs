@@ -4,7 +4,7 @@ using UnityEngine;
 using Photon.Pun;
 using TMPro;
 using UnityEngine.SceneManagement;
-using Photon.Pun;
+
 
 
 public class scriptDoor : MonoBehaviourPunCallbacks
@@ -19,7 +19,7 @@ public class scriptDoor : MonoBehaviourPunCallbacks
     public GameObject key;
     public GameObject nopdoor;
     public GameObject card;
-    public GameObject elevator;
+    public GameObject elevator; 
     public AudioSource keysound;
     public AudioSource door;
     public AudioSource cardsound;
