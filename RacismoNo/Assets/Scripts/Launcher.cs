@@ -19,7 +19,7 @@ public class Launcher : MonoBehaviourPunCallbacks
     [SerializeField] Transform playerListContent;
     [SerializeField] GameObject PlayerListItemPrefab;
     [SerializeField] GameObject startGameButton;
-
+    public GameObject start;
     void Awake()
     {
         Instance = this;
@@ -72,6 +72,13 @@ public class Launcher : MonoBehaviourPunCallbacks
         var room = PhotonNetwork.CurrentRoom;
         room.IsVisible = false;
         PhotonNetwork.LoadLevel("Spawn1");
+    }
+    IEnumerator Waitforsec()
+    {
+        yield return new WaitForSeconds(2);
+        start.SetActive(false);
+        
+        
     }
     public override void OnJoinedRoom()
     {
