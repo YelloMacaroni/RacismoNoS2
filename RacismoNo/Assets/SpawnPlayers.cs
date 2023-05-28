@@ -8,12 +8,16 @@ using UnityEngine.SceneManagement;
 public class SpawnPlayers : MonoBehaviourPunCallbacks
 {
     public GameObject playerPrefab;
+    public GameObject coordinates;
+  
     //public GameObject cat;
     
 
     public void Start()
     {
-        Vector3 Position = new Vector3(11.86f, 0, -7);  
+        
+         Vector3 position = coordinates.transform.position;
+        Vector3 Position = new Vector3(position.x, position.y, position.z);  
        //Vector3 Position2 = new Vector3(-23f, 0, 0); 
         if (PhotonNetwork.IsConnected)      
         {
