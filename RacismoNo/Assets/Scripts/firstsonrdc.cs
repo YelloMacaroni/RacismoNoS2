@@ -13,8 +13,8 @@ public class firstsonrdc : MonoBehaviour
         crihorreur.Play();
         textecorpmort.SetActive(true);
         StartCoroutine("Waitforsec");
-        Destroy(textecorpmort,3f);
-        Destroy(crihorreur,3f);
+        Destroy(textecorpmort,4f);
+        Destroy(crihorreur,4f);
     }
     public void OnTriggerEnter(Collider other)
     {
