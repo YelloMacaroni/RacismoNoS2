@@ -14,18 +14,18 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Spawn1.unity
     guid: d855b94e0b01b2d44be37945e032b537
-  - enabled: 0
-    path: 
-    guid: 00000000000000000000000000000000
+  - enabled: 1
+    path: Assets/Scenes/Floor 3.unity
+    guid: 855795d838af38b4e97427a6eee4c69b
+  - enabled: 1
+    path: Assets/Scenes/Floor RDC.unity
+    guid: c6234c763d46e87478b1f68603ce6d2d
   - enabled: 1
     path: Assets/Scenes/Floor -1.unity
     guid: ee9a64f7165a96847b700ae0e2c873e1
   - enabled: 1
     path: Assets/Scenes/Floor 1.unity
     guid: 95ed490392818124b8b8e90b0edb132c
-  - enabled: 1
-    path: Assets/Scenes/Floor 2.unity
-    guid: 73e0908579a49c14eaa304aff3d8734b
   - enabled: 1
     path: Assets/Scenes/test IA.unity
     guid: bbed7d04ace6e1b40b84ee3bc1cdacf5
