@@ -123,7 +123,6 @@ public class MultiMove : MonoBehaviourPunCallbacks
         if (PhotonNetwork.IsConnected && !photonView.IsMine)
         {
             Destroy(playerCameraToDestroy.GetComponentInChildren<Camera>());
-            Destroy(playerCameraToDestroy.GetComponentInChildren<scriptDoor>());
             Destroy(playerCameraToDestroy.GetComponentInChildren<AudioListener>());
         }
     }
