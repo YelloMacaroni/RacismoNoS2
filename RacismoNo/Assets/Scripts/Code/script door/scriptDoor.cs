@@ -4,9 +4,10 @@ using UnityEngine;
 using Photon.Pun;
 using TMPro;
 using UnityEngine.SceneManagement;
+using Photon.Pun;
 
 
-public class scriptDoor : MonoBehaviour
+public class scriptDoor : MonoBehaviourPunCallbacks
 {
     [SerializeField] public Transform cam;
     [SerializeField] public bool keyLab1Owned = false;
@@ -26,23 +27,25 @@ public class scriptDoor : MonoBehaviour
     public TMP_Text PrincipalQuest;
     public TMP_Text SecondaryQuest;
     bool quest1 = false;
-    bool quest2 = false;
-    
-    public string sceneName; 
-    
+    bool quest2 = false;    
+    public string sceneName;
+    public PhotonView PV; 
 
     public void Start()
     {
-        if ((SceneManager.GetActiveScene()).name == "Floor -1")
+        if (!PhotonNetwork.IsConnected || photonView.IsMine)
+        
+        {if ((SceneManager.GetActiveScene()).name == "Floor -1")
             PrincipalQuest.text = "Leave the basement";
         if ((SceneManager.GetActiveScene()).name == "Spawn1")
-            PrincipalQuest.text = "Enter the building";
+            PrincipalQuest.text = "Enter the building";}
     }
  
     private void Update()
     {
+        if (!PhotonNetwork.IsConnected || photonView.IsMine)
+        {
         RaycastHit hit;
-        
         active = Physics.Raycast(cam.position,cam.TransformDirection(Vector3.forward),out hit,PlayerActivateDistance);
         if (active)
         {
@@ -52,7 +55,8 @@ public class scriptDoor : MonoBehaviour
                 switch (hit.transform.tag)
                 {
                     case "toiletteDoor":
-                        if (hit.transform.GetComponent<Animator>() != null)
+                        if (!PhotonNetwork.IsConnected)
+                        {if (hit.transform.GetComponent<Animator>() != null)
                         {
                             if (hit.transform.GetComponent<Animator>().GetBool("activate"))
                             {
@@ -64,12 +68,17 @@ public class scriptDoor : MonoBehaviour
                             }
                             
                         }
-                        door.Play();
+                        door.Play();}
+                        else{
+                            GameObject tempo = hit.transform.gameObject;
+                            PV.RPC("RPC_OnOffDoor", RpcTarget.All,tempo.GetComponent<PhotonView>().ViewID);
+                        }
                         break;
                     case "lab 1 door": 
                         if (keyLab1Owned)
                         {
-                            if (hit.transform.GetComponent<Animator>() != null)
+                            if (!PhotonNetwork.IsConnected)
+                            {if (hit.transform.GetComponent<Animator>() != null)
                             {
                                 if (hit.transform.GetComponent<Animator>().GetBool("activate"))
                                 {
@@ -81,7 +90,11 @@ public class scriptDoor : MonoBehaviour
                                 }
                             
                             }
-                            door.Play();
+                            door.Play();}
+                            else{
+                             GameObject tempo = hit.transform.gameObject;
+                            PV.RPC("RPC_OnOffDoor", RpcTarget.All,tempo.GetComponent<PhotonView>().ViewID);
+                        }
                         }
                         else
                         {
@@ -100,7 +113,8 @@ public class scriptDoor : MonoBehaviour
                     case "lab 2 door":
                         if (keyLab2Owned)
                         {
-                            if (hit.transform.GetComponent<Animator>() != null)
+                            if (!PhotonNetwork.IsConnected)
+                            {if (hit.transform.GetComponent<Animator>() != null)
                             {
                                 if (hit.transform.GetComponent<Animator>().GetBool("activate"))
                                 {
@@ -112,7 +126,11 @@ public class scriptDoor : MonoBehaviour
                                 }
                                 
                             }
-                            door.Play();
+                            door.Play();}
+                            else{
+                            GameObject tempo = hit.transform.gameObject;
+                            PV.RPC("RPC_OnOffDoor", RpcTarget.All,tempo.GetComponent<PhotonView>().ViewID);
+                        }
                         }
                         else
                         {
@@ -175,8 +193,10 @@ public class scriptDoor : MonoBehaviour
                         {
                             elevatorsound.Play();     
                             StartCoroutine("Waitforsec");
-                              
-                            SceneManager.LoadScene(sceneName);         
+                            if (!PhotonNetwork.IsConnected)
+                                SceneManager.LoadScene(sceneName);
+                            else
+                                photonView.RPC("RPC_Teleportation", RpcTarget.MasterClient,sceneName);        
                         }
                         else
                         {
@@ -204,7 +224,7 @@ public class scriptDoor : MonoBehaviour
                         break;
                 }
             }
-        }
+        }}
     }
     IEnumerator Waitforsec()
     {
@@ -214,6 +234,30 @@ public class scriptDoor : MonoBehaviour
         card.SetActive(false);
         elevator.SetActive(false);
     }
+
+    [PunRPC]
+    void RPC_OnOffDoor(int id){
+        GameObject hit = PhotonNetwork.GetPhotonView(id).gameObject;
+        if (hit.GetComponent<Animator>() != null)
+                        {
+                            if (hit.GetComponent<Animator>().GetBool("activate"))
+                            {
+                                hit.GetComponent<Animator>().ResetTrigger(("activate"));
+                            }
+                            else
+                            {
+                                hit.GetComponent<Animator>().SetTrigger(("activate"));
+                            }
+                            
+                        }
+                        door.Play();
+    }
+
+
+    [PunRPC]
+    void RPC_Teleportation(string Scene){
+            PhotonNetwork.LoadLevel(Scene);    
+        }
    
 }
 

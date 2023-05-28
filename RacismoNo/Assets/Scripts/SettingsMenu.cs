@@ -13,4 +13,13 @@ public class SettingsMenu : MonoBehaviour
     public void SetFullScreen(bool isFullScreen){
         Screen.fullScreen = isFullScreen;
     }
+
+    public void SetAmbiant(bool isFullWhite){
+        if(isFullWhite){
+            RenderSettings.ambientLight = Color.white;
+        }
+        else{
+            RenderSettings.ambientLight = new Color(0.022f,0.000f,0.047f,1.000f);
+        }
+    }
 }

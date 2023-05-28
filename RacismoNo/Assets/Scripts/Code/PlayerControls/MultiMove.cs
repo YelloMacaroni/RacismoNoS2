@@ -1,4 +1,4 @@
-using System.Collections;
+ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using Photon.Pun;
@@ -9,12 +9,12 @@ public class MultiMove : MonoBehaviourPunCallbacks
     Animator animator;
     public bool CanMove { get; private set;}=true;  
     private bool isSprinting => canSprint && Input.GetKey((KeyCode) System.Enum.Parse(typeof(KeyCode),PlayerPrefs.GetString("SprintKey","LeftShift")));
-    private bool shouldCrouch => canCrouch && Input.GetKey((KeyCode) System.Enum.Parse(typeof(KeyCode),PlayerPrefs.GetString("CrouchKey","LeftControl"))) && !duringCrouchAnimation && characterController.isGrounded;
+    public bool shouldCrouch => canCrouch && Input.GetKey((KeyCode) System.Enum.Parse(typeof(KeyCode),PlayerPrefs.GetString("CrouchKey","LeftControl"))) && !duringCrouchAnimation && characterController.isGrounded;
     
     
     [Header("Functional Options")]
     [SerializeField]private bool canSprint=true;
-    [SerializeField]private bool canCrouch=true;
+    [SerializeField]public bool canCrouch=true;
     [SerializeField]private bool canUseHeadBob=true;
     [SerializeField]private bool useFootsteps =true;
 
@@ -56,6 +56,7 @@ public class MultiMove : MonoBehaviourPunCallbacks
     [SerializeField]private Vector3 crouchingCenter= new Vector3(0,0.5f,0);
     [SerializeField]private Vector3 standingCenter= new Vector3(0,0,0);
 
+
     [Header("Headbob Parameters")]
     [SerializeField]private float walkBobSpeed = 14f;
     [SerializeField]private float walkBobAmount = 0.05f;
@@ -77,21 +78,26 @@ public class MultiMove : MonoBehaviourPunCallbacks
     private float GetCurrentOffSet => isCrouching ? baseStepSpeed * crouchStepMultipler : isSprinting? baseStepSpeed * sprintStepMultipler:baseStepSpeed;
     private float defaultYPos=0;
     private float timer;
+ 
+  
     
-    private bool isCrouching;
+    
+    public bool isCrouching;
     private bool duringCrouchAnimation;
 
     [SerializeField] private Camera playerCamera;
     [SerializeField] private GameObject playerCameraToDestroy;
     private CharacterController characterController;
-
     private Vector3 moveDirection;
     private Vector2 currentInput;
+   
 
     private float rotationX=0;
 
     private void Start()
     {
+       
+        Debug.Log(RenderSettings.ambientLight);
         animator=GetComponent<Animator>();
         isWalkingHash=Animator.StringToHash("canWalk");
         isWalkingHashBack=Animator.StringToHash("canWalkback");
@@ -116,7 +122,8 @@ public class MultiMove : MonoBehaviourPunCallbacks
         Cursor.visible = false;
         if (PhotonNetwork.IsConnected && !photonView.IsMine)
         {
-            Destroy(playerCameraToDestroy);
+            Destroy(playerCameraToDestroy.GetComponentInChildren<Camera>());
+            Destroy(playerCameraToDestroy.GetComponentInChildren<AudioListener>());
         }
     }
 
@@ -132,6 +139,8 @@ public class MultiMove : MonoBehaviourPunCallbacks
                     HandleMovementInput();
                     HandleAnimations();
                     HandleMouseLook();
+                 
+                  
                     if (canCrouch)
                         HandleCrouch();
                     if (canUseHeadBob)
@@ -260,7 +269,9 @@ public class MultiMove : MonoBehaviourPunCallbacks
     private void HandleCrouch()
     {
         if(shouldCrouch)
-            StartCoroutine(CrouchStand());
+            {
+                StartCoroutine(CrouchStand());
+            }
     }
     
     public Slider slider;
@@ -274,6 +285,7 @@ public class MultiMove : MonoBehaviourPunCallbacks
     {
         if(isCrouching && Physics.Raycast(playerCamera.transform.position,Vector3.up,1f))
             yield break;
+        
         
         duringCrouchAnimation=true;
         
@@ -294,7 +306,10 @@ public class MultiMove : MonoBehaviourPunCallbacks
         characterController.height=targetHeight;
         characterController.center=targetCenter;
         if(!Input.GetKey((KeyCode) System.Enum.Parse(typeof(KeyCode),PlayerPrefs.GetString("CrouchKey","LeftControl"))))
-            isCrouching = !isCrouching;
+            {
+                isCrouching = !isCrouching;
+                
+            }
         duringCrouchAnimation = false;
     }
     private void HandleHeadbob()

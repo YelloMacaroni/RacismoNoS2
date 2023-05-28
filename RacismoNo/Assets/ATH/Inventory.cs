@@ -23,13 +23,17 @@ public class Inventory : MonoBehaviourPunCallbacks
     [SerializeField] public Image Slot3;
     [SerializeField] public Sprite FlashlightSprite;
     [SerializeField] private int SelectedSlot;
+    public PhotonView PV;
     public GameObject lampe;
     public AudioSource lampesound;
+
+    
+
     // Update is called once per frame
     private void Start()
     {
-        
-        SelectedSlot = 1;
+        if(!PhotonNetwork.IsConnected ||photonView.IsMine)
+        {SelectedSlot = 1;
         FlashLight.SetActive(false);
         FlashLight2.SetActive(false);
         Slot1.enabled = false;
@@ -37,12 +41,13 @@ public class Inventory : MonoBehaviourPunCallbacks
         Slot3.enabled = false;
         squareSlot1.enabled = false;
         squareSlot2.enabled = false;
-        squareSlot3.enabled = false;
+        squareSlot3.enabled = false;}
     }
 
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Alpha1))
+        if(!PhotonNetwork.IsConnected || photonView.IsMine)
+        {if (Input.GetKeyDown(KeyCode.Alpha1))
         {
             if (isFull[0])
             {
@@ -77,24 +82,29 @@ public class Inventory : MonoBehaviourPunCallbacks
         }
         if (isFull[SelectedSlot-1] && slots[SelectedSlot-1].CompareTag("Flalight") )
         {
-            
-            FlashLight.SetActive(true);
-            FlashLight2.SetActive(true);
+            if (PhotonNetwork.IsConnected)
+                PV.RPC("RPC_ActiveLamp", RpcTarget.All);
+            else
+                FlashLight.SetActive(true);
             if (Input.GetKeyDown(KeyCode.F))
             {
                 lampesound.Play();
-                FlashLight.GetComponentInChildren<Light>().enabled =
-                    !FlashLight.GetComponentInChildren<Light>().enabled;
-            }
+                if (PhotonNetwork.IsConnected)
+                    PV.RPC("RPC_OnOffLamp", RpcTarget.All);
+                else
+                FlashLight.GetComponentInChildren<Light>().enabled =  !FlashLight.GetComponentInChildren<Light>().enabled;
+                
             
+            }
         }
         else
         {
             if (isFull[SelectedSlot-1])
             {
-                FlashLight.SetActive(false);
-                FlashLight2.SetActive(false);
-                
+                if (PhotonNetwork.IsConnected)
+                    PV.RPC("RPC_DesactiveLamp", RpcTarget.All);
+                else
+                    FlashLight.SetActive(false);
             }
             
         }
@@ -105,8 +115,10 @@ public class Inventory : MonoBehaviourPunCallbacks
             slots[SelectedSlot - 1].SetActive(true);
             if (slots[SelectedSlot-1].CompareTag("Flalight"))
             {
-                FlashLight.SetActive(false);
-                FlashLight2.SetActive(false);
+                if (PhotonNetwork.IsConnected)
+                    PV.RPC("RPC_DesactiveLamp", RpcTarget.All);
+                else 
+                    FlashLight.SetActive(false);
             }
             
             slots[SelectedSlot - 1] = null;
@@ -185,13 +197,27 @@ public class Inventory : MonoBehaviourPunCallbacks
             }
         }
         
-        
+        }
     }
     IEnumerator Waitforsec()
     {
         yield return new WaitForSeconds(2);
         lampe.SetActive(false);   
     }
+
+    [PunRPC]
+    void RPC_OnOffLamp(){
+        FlashLight.GetComponentInChildren<Light>().enabled =
+                    !FlashLight.GetComponentInChildren<Light>().enabled;
+    }
+
+    [PunRPC]
+    void RPC_ActiveLamp(){
+        FlashLight.SetActive(true);
+    }
     
-    
+    [PunRPC]
+    void RPC_DesactiveLamp(){
+        FlashLight.SetActive(false);
+    }
 }
