@@ -26,7 +26,7 @@ EditorBuildSettings:
   - enabled: 0
     path: Assets/Scenes/Floor -1.unity
     guid: ee9a64f7165a96847b700ae0e2c873e1
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Floor RDC.unity
     guid: c6234c763d46e87478b1f68603ce6d2d
   - enabled: 0
@@ -38,4 +38,7 @@ EditorBuildSettings:
   - enabled: 0
     path: Assets/Scenes/RDCTO1.unity
     guid: abe646cebd5e46e4caf2aa68428409d7
+  - enabled: 1
+    path: Assets/Scenes/3ROOM.unity
+    guid: 2f28034cd8480c842bed1cb1f2acc22d
   m_configObjects: {}

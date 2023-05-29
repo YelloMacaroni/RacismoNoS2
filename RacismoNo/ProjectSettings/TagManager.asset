@@ -19,6 +19,8 @@ TagManager:
   - cat
   - door1
   - elevator RDC
+  - keyboard
+  - door3E
   layers:
   - Default
   - TransparentFX

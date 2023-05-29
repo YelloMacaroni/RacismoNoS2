@@ -4,6 +4,7 @@ using UnityEngine;
 using Photon.Pun;
 using TMPro;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 
 
@@ -31,7 +32,12 @@ public class scriptDoor : MonoBehaviourPunCallbacks
     public string sceneName;
     public string sceneName2;
     public string sceneName3;
-    public PhotonView PV; 
+    public PhotonView PV;
+    public GameObject keyboard; 
+    public AudioSource keyboardsound; 
+    public bool canmdp=true;
+    [SerializeField] public Text Ans;
+    private string Answer = "42";
 
     public void Start()
     {
@@ -238,6 +244,20 @@ public class scriptDoor : MonoBehaviourPunCallbacks
                         
                        
                         break;
+                    case "keyboard":
+                        if (canmdp)
+                        {
+                            keyboardsound.Play();
+                            keyboard.SetActive(true);
+                            canmdp=false;  
+                            Cursor.visible=true;
+                            Cursor.lockState = CursorLockMode.Confined;
+                               
+                        }
+                        
+                        
+                        
+                        break;
                     default:
                         if (!(hit.transform.tag == "Flalight"))
                             if (hit.transform.GetComponent<Animator>() != null)
@@ -264,6 +284,21 @@ public class scriptDoor : MonoBehaviourPunCallbacks
         key.SetActive(false);
         card.SetActive(false);
         elevator.SetActive(false);
+    }
+    public void Number(int number)
+    {
+        Ans.text +=number.ToString();
+    }
+
+    public void Execute()
+    {
+        if(Ans.text==Answer)
+        {Ans.text="Correct";}
+        else
+        {
+            
+            Ans.text="";
+        }
     }
 
     [PunRPC]
