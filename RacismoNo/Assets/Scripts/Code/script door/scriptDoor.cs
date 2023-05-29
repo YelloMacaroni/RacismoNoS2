@@ -29,6 +29,8 @@ public class scriptDoor : MonoBehaviourPunCallbacks
     bool quest1 = false;
     bool quest2 = false;    
     public string sceneName;
+    public string sceneName2;
+    public string sceneName3;
     public PhotonView PV; 
 
     public void Start()
@@ -205,6 +207,35 @@ public class scriptDoor : MonoBehaviourPunCallbacks
                             StartCoroutine("Waitforsec");
                         }
                         quest1 = true;
+                       
+                        break;
+                    case "elevator RDC": 
+                        if (keyelevatormoinsun)
+                        {
+                            elevatorsound.Play();     
+                            StartCoroutine("Waitforsec");
+                            if (!PhotonNetwork.IsConnected)
+                                SceneManager.LoadScene(sceneName2);
+                            else
+                                photonView.RPC("RPC_Teleportation", RpcTarget.MasterClient,sceneName2);        
+                        }
+                        else
+                        {
+                            SecondaryQuest.text = "Find the card";
+                            elevator.SetActive(true);
+                            StartCoroutine("Waitforsec");
+                        }
+                        quest1 = true;
+                        break;
+                    case "elevator First": 
+                        
+                            elevatorsound.Play();     
+                            StartCoroutine("Waitforsec");
+                            if (!PhotonNetwork.IsConnected)
+                                SceneManager.LoadScene(sceneName3);
+                            else
+                                photonView.RPC("RPC_Teleportation", RpcTarget.MasterClient,sceneName3);        
+                        
                        
                         break;
                     default:

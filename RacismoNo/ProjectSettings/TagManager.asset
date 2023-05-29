@@ -18,6 +18,7 @@ TagManager:
   - elevator -1
   - cat
   - door1
+  - elevator RDC
   layers:
   - Default
   - TransparentFX
