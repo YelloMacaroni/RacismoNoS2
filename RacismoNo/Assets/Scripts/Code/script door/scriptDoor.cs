@@ -4,7 +4,6 @@ using UnityEngine;
 using Photon.Pun;
 using TMPro;
 using UnityEngine.SceneManagement;
-using UnityEngine.UI;
 
 
 
@@ -36,8 +35,8 @@ public class scriptDoor : MonoBehaviourPunCallbacks
     public GameObject keyboard; 
     public AudioSource keyboardsound; 
     public bool canmdp=true;
-    [SerializeField] public Text Ans;
-    private string Answer = "42";
+    public bool canescape=false;
+    public string sceneName4;
 
     public void Start()
     {
@@ -252,8 +251,22 @@ public class scriptDoor : MonoBehaviourPunCallbacks
                             canmdp=false;  
                             Cursor.visible=true;
                             Cursor.lockState = CursorLockMode.Confined;
+                            canescape=true;
                                
                         }
+                        break;
+                    case "door3E": 
+                        if (canescape)
+                        {
+                                 
+                            StartCoroutine("Waitforsec");
+                            if (!PhotonNetwork.IsConnected)
+                                SceneManager.LoadScene(sceneName4);
+                            else
+                                photonView.RPC("RPC_Teleportation", RpcTarget.MasterClient,sceneName4);        
+                        }
+                        
+                    
                         
                         
                         
@@ -285,21 +298,7 @@ public class scriptDoor : MonoBehaviourPunCallbacks
         card.SetActive(false);
         elevator.SetActive(false);
     }
-    public void Number(int number)
-    {
-        Ans.text +=number.ToString();
-    }
-
-    public void Execute()
-    {
-        if(Ans.text==Answer)
-        {Ans.text="Correct";}
-        else
-        {
-            
-            Ans.text="";
-        }
-    }
+    
 
     [PunRPC]
     void RPC_OnOffDoor(int id){
@@ -318,6 +317,7 @@ public class scriptDoor : MonoBehaviourPunCallbacks
                         }
                         door.Play();
     }
+    
 
 
     [PunRPC]

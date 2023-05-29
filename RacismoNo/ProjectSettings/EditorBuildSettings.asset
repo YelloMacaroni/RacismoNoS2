@@ -5,40 +5,43 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 0
+  - enabled: 1
     path: Assets/Scenes/Lancement.unity
     guid: be82feed74c900741befbed4fad84b6b
-  - enabled: 0
+  - enabled: 1
     path: Assets/Scenes/MultiplayerInterface.unity
     guid: 29b8b046aa908fb47aa3af29bacce60b
   - enabled: 0
     path: 
     guid: 00000000000000000000000000000000
-  - enabled: 0
+  - enabled: 1
     path: Assets/Scenes/Spawn1.unity
     guid: 1c371fa50b27db149bf185870854eb92
   - enabled: 0
     path: 
     guid: 00000000000000000000000000000000
-  - enabled: 0
+  - enabled: 1
     path: Assets/Scenes/Floor 3.unity
     guid: 5acb1257e8545594bab672eaee3ae3c8
-  - enabled: 0
+  - enabled: 1
     path: Assets/Scenes/Floor -1.unity
     guid: ee9a64f7165a96847b700ae0e2c873e1
-  - enabled: 0
+  - enabled: 1
     path: Assets/Scenes/Floor RDC.unity
     guid: c6234c763d46e87478b1f68603ce6d2d
-  - enabled: 0
+  - enabled: 1
     path: Assets/Scenes/Floor 1.unity
     guid: 95ed490392818124b8b8e90b0edb132c
-  - enabled: 0
+  - enabled: 1
     path: Assets/Scenes/test IA.unity
     guid: bbed7d04ace6e1b40b84ee3bc1cdacf5
-  - enabled: 0
+  - enabled: 1
     path: Assets/Scenes/RDCTO1.unity
     guid: abe646cebd5e46e4caf2aa68428409d7
   - enabled: 1
     path: Assets/Scenes/3ROOM.unity
     guid: 2f28034cd8480c842bed1cb1f2acc22d
+  - enabled: 1
+    path: Assets/Scenes/End Game.unity
+    guid: 85a93fcdf2cd9874b807726c2216c764
   m_configObjects: {}
