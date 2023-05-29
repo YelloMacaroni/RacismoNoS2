@@ -16,17 +16,12 @@ namespace Scenes.RDCTO1
         public GameObject player;
 
         
-        IEnumerator Waitforsec()
-        {
-            yield return new WaitForSeconds(5);
-
-        }
+        
 
         void Start()
         {
             agent = GetComponent<NavMeshAgent>();
-            agent.speed = (float)3.5;
-            StartCoroutine("Waitforsec");
+            agent.speed = (float)8.5;
             player = GameObject.FindWithTag("Player");
         }
     

@@ -6,7 +6,7 @@ public class textgame : MonoBehaviour
 {
 
     public GameObject start;
-    public GameObject dsq;
+   
     
     // Start is called before the first frame update
     void Start()
@@ -25,11 +25,8 @@ public class textgame : MonoBehaviour
 
     IEnumerator Waitforsec()
     {
-        yield return new WaitForSeconds(5);
+        yield return new WaitForSeconds(3);
         start.SetActive(false);
-        yield return new WaitForSeconds(2);
-        dsq.SetActive(true);
-        yield return new WaitForSeconds(4);
-        dsq.SetActive(false);
+        
     }
 }
