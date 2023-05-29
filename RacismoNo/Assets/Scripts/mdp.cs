@@ -12,6 +12,9 @@ public class mdp : MonoBehaviour
 
     public AudioSource True;
     public AudioSource wrong;
+    
+
+     
     public void Number(int number)
     {
         Ans.text +=number.ToString();
@@ -26,8 +29,7 @@ public class mdp : MonoBehaviour
             StartCoroutine("Waitforsec");
             Cursor.visible=false;
             Cursor.lockState = CursorLockMode.Locked;
-            GameObject obj = GameObject.FindGameObjectWithTag("door3E");
-            obj.SetActive(true);
+            
             
         }
         else
