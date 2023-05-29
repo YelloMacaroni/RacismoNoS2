@@ -17,6 +17,7 @@ TagManager:
   - key elevator -1
   - elevator -1
   - cat
+  - door1
   layers:
   - Default
   - TransparentFX
