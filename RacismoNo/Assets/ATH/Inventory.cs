@@ -41,7 +41,17 @@ public class Inventory : MonoBehaviourPunCallbacks
         Slot3.enabled = false;
         squareSlot1.enabled = false;
         squareSlot2.enabled = false;
-        squareSlot3.enabled = false;}
+        squareSlot3.enabled = false;
+        if (PlayerPrefs.GetString("lampe","False") == "True")
+        {
+            Slot1.enabled = true;
+            Slot1.sprite = FlashlightSprite;
+            SelectedSlot = 1;
+            squareSlot1.enabled = true;
+            slots[0] = FlashLight ;
+            isFull[0] = true;
+        }
+        }
     }
 
     void Update()
@@ -187,6 +197,7 @@ public class Inventory : MonoBehaviourPunCallbacks
                                     break;
                             }
                             slots[i].SetActive(false);
+                            PlayerPrefs.SetString("lampe","True");
 
 
                         }
