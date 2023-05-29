@@ -1,9 +1,10 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.AI; //important
+using UnityEngine.AI;
+using UnityEngine.SceneManagement; //important
 
-//if you use this code you are contractually obligated to like the YT video
+
 public class IAmechant : MonoBehaviour //don't forget to change the script name if you haven't
 {
     public NavMeshAgent agent;
@@ -22,6 +23,7 @@ public class IAmechant : MonoBehaviour //don't forget to change the script name 
     
     void Update()
     {
+        
         if(agent.remainingDistance <= agent.stoppingDistance) //done with path
         {
             Vector3 point;
@@ -31,8 +33,10 @@ public class IAmechant : MonoBehaviour //don't forget to change the script name 
                 agent.SetDestination(point);
             }
         }
-
+            
         SetAgro();
+        
+        
 
 
     }
@@ -42,10 +46,8 @@ public class IAmechant : MonoBehaviour //don't forget to change the script name 
 
         Vector3 randomPoint = center + Random.insideUnitSphere * range; //random point in a sphere 
         NavMeshHit hit;
-        if (NavMesh.SamplePosition(randomPoint, out hit, 1.0f, NavMesh.AllAreas)) //documentation: https://docs.unity3d.com/ScriptReference/AI.NavMesh.SamplePosition.html
-        { 
-            //the 1.0f is the max distance from the random point to a point on the navmesh, might want to increase if range is big
-            //or add a for loop like in the documentation
+        if (NavMesh.SamplePosition(randomPoint, out hit, 1.0f, NavMesh.AllAreas)) 
+        {
             result = hit.position;
             return true;
         }
@@ -60,7 +62,7 @@ public class IAmechant : MonoBehaviour //don't forget to change the script name 
         active = Physics.Raycast(cam.position,cam.TransformDirection(Vector3.forward),out hit,agrodDistance);
         if (active && hit.transform.CompareTag("Player"))
         {
-            agent.speed = 7;
+            agent.speed = 4;
             agent.SetDestination(hit.transform.position);
             return true;
         }
