@@ -20502,7 +20502,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 88f54498022b57e44b16e2b8c46368d8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  iaPrefab: {fileID: 3065416036051859301, guid: eeb53cf02fbd70e458e4edffe7781591, type: 3}
+  iaPrefab: {fileID: 6994319279229773936, guid: aa403248a2a0ed945b56d8759edf00c4, type: 3}
   cube: {fileID: 455611685}
 --- !u!4 &455749581 stripped
 Transform:
