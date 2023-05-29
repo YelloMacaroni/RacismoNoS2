@@ -6,15 +6,17 @@ public class firstsonrdc : MonoBehaviour
 {
     public GameObject textecorpmort; 
     public AudioSource crihorreur;
+    public Collider dqs;
 
 
     public void Allerauniveau()
     {
         crihorreur.Play();
         textecorpmort.SetActive(true);
+        dqs.enabled=false;
         StartCoroutine("Waitforsec");
-        Destroy(textecorpmort,4f);
-        Destroy(crihorreur,4f);
+        
+       
     }
     public void OnTriggerEnter(Collider other)
     {
@@ -23,8 +25,9 @@ public class firstsonrdc : MonoBehaviour
 
     IEnumerator Waitforsec()
     {
-        yield return new WaitForSeconds(2);
+        yield return new WaitForSeconds(3);
         textecorpmort.SetActive(false);
+        dqs.enabled=true;
         
     }
     

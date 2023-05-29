@@ -18,10 +18,12 @@ public class scriptDoor : MonoBehaviourPunCallbacks
     [SerializeField] public bool canacessrdc=false;
     public GameObject key;
     public GameObject nopdoor;
+    public GameObject textfin;
     public GameObject card;
     public GameObject elevator; 
     public AudioSource keysound;
     public AudioSource door;
+    
     public AudioSource cardsound;
     public AudioSource elevatorsound;
     public TMP_Text PrincipalQuest;
@@ -252,6 +254,8 @@ public class scriptDoor : MonoBehaviourPunCallbacks
                             Cursor.visible=true;
                             Cursor.lockState = CursorLockMode.Confined;
                             canescape=true;
+                            textfin.SetActive(true);
+                            StartCoroutine("Waitforsec");
                                
                         }
                         break;
@@ -297,6 +301,7 @@ public class scriptDoor : MonoBehaviourPunCallbacks
         key.SetActive(false);
         card.SetActive(false);
         elevator.SetActive(false);
+        textfin.SetActive(false);
     }
     
 
