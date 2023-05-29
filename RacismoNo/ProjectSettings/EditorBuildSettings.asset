@@ -27,7 +27,7 @@ EditorBuildSettings:
     path: Assets/Scenes/Floor -1.unity
     guid: ee9a64f7165a96847b700ae0e2c873e1
   - enabled: 1
-    path: Assets/Scenes/Floor RDC.unity
+    path: Assets/Scenes/Floor rdc.unity
     guid: c6234c763d46e87478b1f68603ce6d2d
   - enabled: 1
     path: Assets/Scenes/Floor 1.unity
@@ -44,4 +44,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/End Game.unity
     guid: 85a93fcdf2cd9874b807726c2216c764
+  - enabled: 1
+    path: Assets/Scenes/Game Over.unity
+    guid: 56380751268079d428dc96c2265eb908
   m_configObjects: {}
