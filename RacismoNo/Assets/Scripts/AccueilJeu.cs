@@ -14,4 +14,9 @@ public class AccueilJeu : MonoBehaviour
     {
         Application.Quit();
     }
+
+    void Start()
+    {
+        PlayerPrefs.SetString("lampe","False");
+    }
 }
