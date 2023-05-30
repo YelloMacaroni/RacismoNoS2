@@ -205,7 +205,7 @@ public class scriptDoor : MonoBehaviourPunCallbacks
                             if (!PhotonNetwork.IsConnected)
                                 SceneManager.LoadScene(sceneName);
                             else
-                                photonView.RPC("RPC_Teleportation", RpcTarget.MasterClient,sceneName);        
+                                SceneManager.LoadScene(sceneName);            
                         }
                         else
                         {
@@ -224,7 +224,7 @@ public class scriptDoor : MonoBehaviourPunCallbacks
                             if (!PhotonNetwork.IsConnected)
                                 SceneManager.LoadScene(sceneName2);
                             else
-                                photonView.RPC("RPC_Teleportation", RpcTarget.MasterClient,sceneName2);        
+                                PhotonNetwork.LoadLevel(sceneName2);          
                         }
                         else
                         {
@@ -241,7 +241,7 @@ public class scriptDoor : MonoBehaviourPunCallbacks
                             if (!PhotonNetwork.IsConnected)
                                 SceneManager.LoadScene(sceneName3);
                             else
-                                photonView.RPC("RPC_Teleportation", RpcTarget.MasterClient,sceneName3);        
+                                PhotonNetwork.LoadLevel(sceneName3);             
                         
                        
                         break;
@@ -267,7 +267,7 @@ public class scriptDoor : MonoBehaviourPunCallbacks
                             if (!PhotonNetwork.IsConnected)
                                 SceneManager.LoadScene(sceneName4);
                             else
-                                photonView.RPC("RPC_Teleportation", RpcTarget.MasterClient,sceneName4);        
+                                 PhotonNetwork.LoadLevel(sceneName4);      
                         }
                         
                     
@@ -325,10 +325,6 @@ public class scriptDoor : MonoBehaviourPunCallbacks
     
 
 
-    [PunRPC]
-    void RPC_Teleportation(string Scene){
-            PhotonNetwork.LoadLevel(Scene);    
-        }
    
 }
 

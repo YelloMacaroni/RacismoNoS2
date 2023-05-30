@@ -12,15 +12,10 @@ public class Teleportation : MonoBehaviourPunCallbacks
         if (!PhotonNetwork.IsConnected)
             SceneManager.LoadScene(sceneName);
         else
-            photonView.RPC("RPC_Teleportation", RpcTarget.MasterClient,sceneName);
+            SceneManager.LoadScene(sceneName);
     }
     public void OnTriggerEnter(Collider other)
     {
         Allerauniveau(); 
     }
-
-    [PunRPC]
-    void RPC_Teleportation(string Scene){
-            PhotonNetwork.LoadLevel(Scene);    
-        }
 }
