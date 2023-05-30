@@ -15,6 +15,8 @@ public class firstsonrdc : MonoBehaviour
         textecorpmort.SetActive(true);
         dqs.enabled=false;
         StartCoroutine("Waitforsec");
+        Destroy(textecorpmort,3f);
+        Destroy(crihorreur,3f);
         
        
     }

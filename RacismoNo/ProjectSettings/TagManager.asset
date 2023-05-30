@@ -21,6 +21,7 @@ TagManager:
   - elevator RDC
   - keyboard
   - door3E
+  - IA
   layers:
   - Default
   - TransparentFX

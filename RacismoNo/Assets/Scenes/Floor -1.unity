@@ -14464,6 +14464,7 @@ GameObject:
   - component: {fileID: 468502616}
   - component: {fileID: 468502615}
   - component: {fileID: 468502620}
+  - component: {fileID: 468502621}
   m_Layer: 0
   m_Name: respirato
   m_TagString: Untagged
@@ -14876,6 +14877,19 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &468502621
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 468502614}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8dc4d85783d77674aa9c3f0670d7b4a1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  start: {fileID: 542483422}
 --- !u!1 &473909934
 GameObject:
   m_ObjectHideFlags: 0
@@ -18873,7 +18887,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh573416
+  m_Name: pb_Mesh625424
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -22023,7 +22037,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh60802
+  m_Name: pb_Mesh625642
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -23296,7 +23310,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   start: {fileID: 1304600854}
-  dsq: {fileID: 542483422}
 --- !u!1001 &1400392438
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -26190,7 +26203,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh573806
+  m_Name: pb_Mesh625814
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2

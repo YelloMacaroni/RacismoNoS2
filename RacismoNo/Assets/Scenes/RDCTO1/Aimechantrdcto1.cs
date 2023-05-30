@@ -3,6 +3,9 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
 
+using Photon.Pun;
+using TMPro;
+using UnityEngine.SceneManagement;
 //important
 
 namespace Scenes.RDCTO1
@@ -12,8 +15,11 @@ namespace Scenes.RDCTO1
         // Start is called before the first frame update
         public NavMeshAgent agent;
 
-
+         public string sceneName; 
+        public AudioSource scream;
         public GameObject player;
+        public GameObject ia;
+        public float distanceThreshold = 0.001f;
 
         
         
@@ -30,6 +36,16 @@ namespace Scenes.RDCTO1
         void Update()
         {
             agent.SetDestination(player.transform.position);
+            float distance = Vector3.Distance(player.transform.position, ia.transform.position);
+            if ( distance < distanceThreshold)
+            {
+                
+                scream.Play();
+        
+                SceneManager.LoadScene(sceneName); 
+            }
+           
         }
+       
     }
 }
